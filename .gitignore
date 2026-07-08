@@ -1,0 +1,13 @@
+# Ignorar todo por defecto
+*
+
+# Permitir el directorio docs y su contenido
+!docs/
+!docs/**
+
+# Permitir el directorio documentos y su contenido
+!documentos/
+!documentos/**
+
+# Permitir el propio .gitignore
+!.gitignore
