@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-MX">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="AES Suministros (AES Comercial) — Suministro y venta de insumos, consumibles y equipos de limpieza profesional para empresas en México. Marca propia Rumo.">
+  <meta name="description"
+    content="AES Suministros (AES Comercial) — Suministro y venta de insumos, consumibles y equipos de limpieza profesional para empresas en México. Marca propia Rumo.">
 
   <!-- SEO -->
   <title>AES Suministros (Comercial) | Insumos de Limpieza Profesional para Empresas en México</title>
@@ -12,7 +14,9 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
@@ -24,13 +28,23 @@
       transform: translateY(24px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
+
     .reveal.revealed {
       opacity: 1;
       transform: none;
     }
-    .reveal--delay-1 { transition-delay: 0.1s; }
-    .reveal--delay-2 { transition-delay: 0.2s; }
-    .reveal--delay-3 { transition-delay: 0.3s; }
+
+    .reveal--delay-1 {
+      transition-delay: 0.1s;
+    }
+
+    .reveal--delay-2 {
+      transition-delay: 0.2s;
+    }
+
+    .reveal--delay-3 {
+      transition-delay: 0.3s;
+    }
 
     /* Rumo Section styling */
     .rumo-brand-badge {
@@ -48,7 +62,7 @@
       text-transform: uppercase;
       margin-bottom: var(--space-sm);
     }
-    
+
     .product-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -122,6 +136,7 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
     @media (max-width: 480px) {
       .product-grid {
         grid-template-columns: 1fr;
@@ -132,561 +147,586 @@
 
 <body>
 
-<!-- ============================================================ -->
-<!-- HEADER / NAV                                                  -->
-<!-- ============================================================ -->
-<header class="site-header scrolled" role="banner">
-  <div class="container">
-    <div class="header-inner">
+  <!-- ============================================================ -->
+  <!-- HEADER / NAV                                                  -->
+  <!-- ============================================================ -->
+  <header class="site-header scrolled" role="banner">
+    <div class="container">
+      <div class="header-inner">
 
-      <!-- Co-Branded Logos (Endorsed Branding) -->
-      <div class="site-logo-wrap" style="display: flex; align-items: center; gap: 16px;">
-        <!-- Logo Grupo AES (Back to Home) -->
-        <a href="index.html#inicio" class="site-logo" aria-label="Grupo AES — Inicio">
-          <img
-            src="assets/logos/grupo-aes-claro.svg"
-            alt="Grupo AES"
-            width="130"
-            height="24"
-            fetchpriority="high"
-          >
-        </a>
-        
-        <!-- Vertical Divider -->
-        <span style="height: 20px; width: 1px; background-color: var(--color-gray-light); display: inline-block;"></span>
-        
-        <!-- Logo AES Comercial -->
-        <a href="#inicio-comercial" class="site-logo" aria-label="AES Comercial — Inicio" style="display: flex; align-items: center; text-decoration: none;">
-          <img
-            src="assets/logos/aes-comercial.svg"
-            alt="AES Comercial"
-            width="140"
-            height="28"
-            loading="lazy"
-          >
-        </a>
+        <!-- Co-Branded Logos (Endorsed Branding) -->
+        <div class="site-logo-wrap" style="display: flex; align-items: center; gap: 16px;">
+          <!-- Logo Grupo AES (Back to Home) -->
+          <a href="index.html#inicio" class="site-logo" aria-label="Grupo AES — Inicio">
+            <img src="assets/logos/grupo-aes-claro.svg" alt="Grupo AES" width="130" height="24" fetchpriority="high">
+          </a>
+
+          <!-- Vertical Divider -->
+          <span
+            style="height: 20px; width: 1px; background-color: var(--color-gray-light); display: inline-block;"></span>
+
+          <!-- Logo AES Comercial -->
+          <a href="#inicio-comercial" class="site-logo" aria-label="AES Comercial — Inicio"
+            style="display: flex; align-items: center; text-decoration: none;">
+            <img src="assets/logos/aes-comercial.svg" alt="AES Comercial" width="140" height="28" loading="lazy">
+          </a>
+        </div>
+
+        <!-- Nav -->
+        <nav class="site-nav" id="main-nav" aria-label="Navegación principal">
+          <a class="nav-link" href="index.html#inicio">Inicio</a>
+          <a class="nav-link" href="index.html#empresas">Grupo AES</a>
+          <a class="nav-link" href="seguridad.html">Seguridad</a>
+          <a class="nav-link" href="limpieza.html">Limpieza</a>
+          <a class="nav-link active" href="comercial.html">Comercial</a>
+          <a class="nav-link" href="#cobertura">Cobertura</a>
+          <a class="nav-cta" href="#contacto-interno">Contacto</a>
+        </nav>
+
+        <!-- Hamburger (mobile) -->
+        <button class="nav-toggle" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú de navegación">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
       </div>
-
-      <!-- Nav -->
-      <nav class="site-nav" id="main-nav" aria-label="Navegación principal">
-        <a class="nav-link" href="index.html#inicio">Inicio</a>
-        <a class="nav-link" href="index.html#empresas">Grupo AES</a>
-        <a class="nav-link" href="seguridad.html">Seguridad</a>
-        <a class="nav-link" href="limpieza.html">Limpieza</a>
-        <a class="nav-link active" href="comercial.html">Comercial</a>
-        <a class="nav-link" href="#cobertura">Cobertura</a>
-        <a class="nav-cta" href="#contacto-interno">Contacto</a>
-      </nav>
-
-      <!-- Hamburger (mobile) -->
-      <button
-        class="nav-toggle"
-        aria-expanded="false"
-        aria-controls="main-nav"
-        aria-label="Abrir menú de navegación"
-      >
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-        <span class="nav-toggle__bar"></span>
-      </button>
-
     </div>
-  </div>
-</header>
+  </header>
 
 
-<!-- ============================================================ -->
-<!-- HERO INTERNO                                                  -->
-<!-- ============================================================ -->
-<section id="inicio-comercial" class="hero hero--internal" style="--color-seguridad: var(--color-comercial);">
+  <!-- ============================================================ -->
+  <!-- HERO INTERNO                                                  -->
+  <!-- ============================================================ -->
+  <section id="inicio-comercial" class="hero hero--internal" style="--color-seguridad: var(--color-comercial);">
 
-  <!-- Background image -->
-  <img
-    class="hero__bg"
-    src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80&auto=format&fit=crop"
-    alt=""
-    role="presentation"
-    width="1920"
-    height="1080"
-    fetchpriority="high"
-    loading="eager"
-  >
+    <!-- Background image -->
+    <img class="hero__bg"
+      src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80&auto=format&fit=crop" alt=""
+      role="presentation" width="1920" height="1080" fetchpriority="high" loading="eager">
 
-  <!-- Overlay gradient specific to Comercial green theme -->
-  <div class="hero__overlay" style="background: linear-gradient(105deg, rgba(14,25,41,0.94) 0%, rgba(45,122,62,0.85) 60%, rgba(22,38,64,0.40) 100%);" aria-hidden="true"></div>
+    <!-- Overlay gradient specific to Comercial green theme -->
+    <div class="hero__overlay"
+      style="background: linear-gradient(105deg, rgba(14,25,41,0.94) 0%, rgba(45,122,62,0.85) 60%, rgba(22,38,64,0.40) 100%);"
+      aria-hidden="true"></div>
 
-  <div class="container">
-    <div class="hero__content">
+    <div class="container">
+      <div class="hero__content">
 
-      <div class="hero__eyebrow">
-        <span class="hero__eyebrow-line" style="background-color: var(--color-comercial);" aria-hidden="true"></span>
-        <span class="hero__eyebrow-text">AES Comercial (Suministros)</span>
-      </div>
-
-      <!-- H1 -->
-      <h1 class="hero__title">
-        Insumos de Limpieza<br>
-        Profesional para Empresas
-      </h1>
-
-      <p class="hero__subtitle">
-        Todo lo que tu operación necesita para mantenerse impecable. Suministramos insumos, consumibles y productos profesionales de limpieza para industrias e instituciones.
-      </p>
-
-      <div class="hero__actions">
-        <a href="#contacto-interno" class="btn btn--primary" style="background-color: var(--color-comercial); border-color: var(--color-comercial);">Solicitar cotización</a>
-        <a href="#rumo" class="btn btn--outline">Conoce Marca Rumo</a>
-      </div>
-
-      <!-- Stats de Confianza -->
-      <div class="hero-stats" aria-label="Estadísticas de confianza">
-        <div class="hero-stat">
-          <span class="hero-stat__value">100%</span>
-          <span class="hero-stat__label">Abastecimiento Continuo</span>
+        <div class="hero__eyebrow">
+          <span class="hero__eyebrow-line" style="background-color: var(--color-comercial);" aria-hidden="true"></span>
+          <span class="hero__eyebrow-text">AES Comercial (Suministros)</span>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat__value">Directo</span>
-          <span class="hero-stat__label">Distribución y Logística Propia</span>
+
+        <!-- H1 -->
+        <h1 class="hero__title">
+          Insumos de Limpieza<br>
+          Profesional para Empresas
+        </h1>
+
+        <p class="hero__subtitle">
+          Todo lo que tu operación necesita para mantenerse impecable. Suministramos insumos, consumibles y productos
+          profesionales de limpieza para industrias e instituciones.
+        </p>
+
+        <div class="hero__actions">
+          <a href="#contacto-interno" class="btn btn--primary"
+            style="background-color: var(--color-comercial); border-color: var(--color-comercial);">Solicitar
+            cotización</a>
+          <a href="#rumo" class="btn btn--outline">Conoce Marca Rumo</a>
         </div>
-        <div class="hero-stat">
-          <span class="hero-stat__value">Marca Rumo</span>
-          <span class="hero-stat__label">Línea de Insumos Propios</span>
+
+        <!-- Stats de Confianza -->
+        <div class="hero-stats" aria-label="Estadísticas de confianza">
+          <div class="hero-stat">
+            <span class="hero-stat__value">100%</span>
+            <span class="hero-stat__label">Abastecimiento Continuo</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">Directo</span>
+            <span class="hero-stat__label">Distribución y Logística Propia</span>
+          </div>
+          <div class="hero-stat">
+            <span class="hero-stat__value">Marca Rumo</span>
+            <span class="hero-stat__label">Línea de Insumos Propios</span>
+          </div>
         </div>
+
       </div>
-
-    </div>
-  </div>
-
-</section>
-
-
-<!-- ============================================================ -->
-<!-- NUESTROS SERVICIOS                                            -->
-<!-- ============================================================ -->
-<section id="servicios" class="section">
-  <div class="container">
-
-    <div class="empresas__header reveal">
-      <span class="section-label">Abastecimiento estratégico</span>
-      <h2 class="section-title">Soluciones de suministro</h2>
-      <div class="section-divider section-divider--center" style="background-color: var(--color-comercial);"></div>
     </div>
 
-    <div class="services-grid">
+  </section>
 
-      <!-- 1. Insumos de limpieza -->
-      <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
-          </svg>
-        </div>
-        <h3 class="service-card__title">Insumos de limpieza</h3>
-        <p class="service-card__desc">
-          Líquidos limpiadores, desengrasantes, jabón, aromatizantes y desinfectantes concentrados de alto rendimiento.
-        </p>
+
+  <!-- ============================================================ -->
+  <!-- NUESTROS SERVICIOS                                            -->
+  <!-- ============================================================ -->
+  <section id="servicios" class="section">
+    <div class="container">
+
+      <div class="empresas__header reveal">
+        <span class="section-label">Abastecimiento estratégico</span>
+        <h2 class="section-title">Soluciones de suministro</h2>
+        <div class="section-divider section-divider--center" style="background-color: var(--color-comercial);"></div>
       </div>
 
-      <!-- 2. Consumibles institucionales -->
-      <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-            <polyline points="14 2 14 8 20 8"/>
-          </svg>
-        </div>
-        <h3 class="service-card__title">Consumibles institucionales</h3>
-        <p class="service-card__desc">
-          Abastecimiento de papel higiénico jumbo, toallas interdobladas, jabón de manos y dispensadores.
-        </p>
-      </div>
+      <div class="services-grid">
 
-      <!-- 3. Equipos y accesorios -->
-      <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
-          </svg>
+        <!-- 1. Insumos de limpieza -->
+        <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Insumos de limpieza</h3>
+          <p class="service-card__desc">
+            Líquidos limpiadores, desengrasantes, jabón, aromatizantes y desinfectantes concentrados de alto
+            rendimiento.
+          </p>
         </div>
-        <h3 class="service-card__title">Equipos y accesorios</h3>
-        <p class="service-card__desc">
-          Mops, escobas, microfibras, botes de basura, carros de limpieza y maquinarias especiales de tallado.
-        </p>
-      </div>
 
-      <!-- 4. Soluciones a la medida -->
-      <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <polygon points="12 2 2 7 12 12 22 7 12 2"/>
-            <polyline points="2 17 12 22 22 17"/>
-          </svg>
+        <!-- 2. Consumibles institucionales -->
+        <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Consumibles institucionales</h3>
+          <p class="service-card__desc">
+            Abastecimiento de papel higiénico jumbo, toallas interdobladas, jabón de manos y dispensadores.
+          </p>
         </div>
-        <h3 class="service-card__title">Soluciones a la medida</h3>
-        <p class="service-card__desc">
-          Evaluamos el consumo mensual de tu empresa para proponer compras consolidadas y evitar desabasto.
-        </p>
-      </div>
 
-      <!-- 5. Abastecimiento continuo -->
-      <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="12" cy="12" r="10"/>
-            <polyline points="12 6 12 12 16 14"/>
-          </svg>
+        <!-- 3. Equipos y accesorios -->
+        <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Equipos y accesorios</h3>
+          <p class="service-card__desc">
+            Mops, escobas, microfibras, botes de basura, carros de limpieza y maquinarias especiales de tallado.
+          </p>
         </div>
-        <h3 class="service-card__title">Abastecimiento continuo</h3>
-        <p class="service-card__desc">
-          Rutas programadas de entrega puntual directamente en tus almacenes o sucursales con logística propia.
-        </p>
-      </div>
 
-      <!-- 6. Atención especializada -->
-      <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
-        <div class="service-card__icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
-          </svg>
+        <!-- 4. Soluciones a la medida -->
+        <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="12 2 2 7 12 12 22 7 12 2" />
+              <polyline points="2 17 12 22 22 17" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Soluciones a la medida</h3>
+          <p class="service-card__desc">
+            Evaluamos el consumo mensual de tu empresa para proponer compras consolidadas y evitar desabasto.
+          </p>
         </div>
-        <h3 class="service-card__title">Atención especializada</h3>
-        <p class="service-card__desc">
-          Asignamos un ejecutivo de cuenta dedicado para procesar tus órdenes de compra de forma ágil.
-        </p>
-      </div>
 
+        <!-- 5. Abastecimiento continuo -->
+        <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 6 12 12 16 14" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Abastecimiento continuo</h3>
+          <p class="service-card__desc">
+            Rutas programadas de entrega puntual directamente en tus almacenes o sucursales con logística propia.
+          </p>
+        </div>
+
+        <!-- 6. Atención especializada -->
+        <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
+          <div class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+            </svg>
+          </div>
+          <h3 class="service-card__title">Atención especializada</h3>
+          <p class="service-card__desc">
+            Asignamos un ejecutivo de cuenta dedicado para procesar tus órdenes de compra de forma ágil.
+          </p>
+        </div>
+
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ============================================================ -->
-<!-- MARCA PROPIA — RUMO                                           -->
-<!-- ============================================================ -->
-<section id="rumo" class="section section--light">
-  <div class="container">
-    
-    <div style="max-width: 700px; margin-bottom: var(--space-lg);">
-      <div class="rumo-brand-badge">
-        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-        Marca Exclusiva
-      </div>
-      <h2 style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 800; color: var(--color-navy); text-transform: uppercase; line-height: 1.1; margin-bottom: var(--space-sm);">
-        Rumo: Productos de limpieza profesional
-      </h2>
-      <p style="font-size: var(--text-base); color: var(--color-gray); line-height: 1.6;">
-        Desarrollamos formulaciones químicas de alta eficiencia y rendimiento optimizado. Rumo es la marca propia de Grupo AES diseñada para cumplir los más altos estándares de higiene corporativa e industrial.
-      </p>
-    </div>
+  <!-- ============================================================ -->
+  <!-- MARCA PROPIA — RUMO                                           -->
+  <!-- ============================================================ -->
+  <section id="rumo" class="section section--light">
+    <div class="container">
 
-    <!-- Product catalog mock -->
-    <div class="product-grid">
-
-      <div class="product-card reveal">
-        <div class="product-card__img-wrap">
-          <!-- SVG representacional de botella de Limpiador Multiusos -->
-          <svg viewBox="0 0 100 150" width="60" height="100">
-            <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640"/>
-            <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#35a8e0"/>
-            <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2"/>
-            <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#162640">rumo</text>
+      <div style="max-width: 700px; margin-bottom: var(--space-lg);">
+        <div class="rumo-brand-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+            <polyline points="20 6 9 17 4 12" />
           </svg>
+          Marca Exclusiva
         </div>
-        <div class="product-card__body">
-          <span class="product-card__category">Químicos</span>
-          <h4 class="product-card__title">Limpiador Multiusos</h4>
-          <p class="product-card__desc">Poder desengrasante concentrado con aromas duraderos.</p>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal--delay-1">
-        <div class="product-card__img-wrap">
-          <svg viewBox="0 0 100 150" width="60" height="100">
-            <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640"/>
-            <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#2d7a3e"/>
-            <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2"/>
-            <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#162640">rumo</text>
-          </svg>
-        </div>
-        <div class="product-card__body">
-          <span class="product-card__category">Sanitizantes</span>
-          <h4 class="product-card__title">Sanitizante de Superficies</h4>
-          <p class="product-card__desc">Elimina el 99.9% de bacterias sin dañar materiales.</p>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal--delay-2">
-        <div class="product-card__img-wrap">
-          <svg viewBox="0 0 100 150" width="60" height="100">
-            <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640"/>
-            <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#e52d22"/>
-            <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2"/>
-            <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#162640">rumo</text>
-          </svg>
-        </div>
-        <div class="product-card__body">
-          <span class="product-card__category">Lavandería</span>
-          <h4 class="product-card__title">Detergente Líquido</h4>
-          <p class="product-card__desc">Fórmula de alta concentración para uniformes y mantelería.</p>
-        </div>
-      </div>
-
-      <div class="product-card reveal reveal--delay-3">
-        <div class="product-card__img-wrap">
-          <svg viewBox="0 0 100 150" width="60" height="100">
-            <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640"/>
-            <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#81868e"/>
-            <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2"/>
-            <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold" fill="#162640">rumo</text>
-          </svg>
-        </div>
-        <div class="product-card__body">
-          <span class="product-card__category">Cuidado Corporal</span>
-          <h4 class="product-card__title">Jabón Líquido Manos</h4>
-          <p class="product-card__desc">Suave con la piel, ideal para tránsitos institucionales elevados.</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-
-<!-- ============================================================ -->
-<!-- COBERTURA NACIONAL                                            -->
-<!-- ============================================================ -->
-<section id="cobertura" class="section">
-  <div class="container">
-    <div class="institucional__grid">
-
-      <!-- Texto -->
-      <div class="reveal">
-        <span class="section-label">Red Logística</span>
-        <h2 class="section-title">Cobertura de distribución</h2>
-        <div class="section-divider" style="background-color: var(--color-comercial); margin-bottom: var(--space-md);"></div>
-        <p class="institucional__body">
-          Entregamos consumibles directamente en tus naves industriales, centros de distribución y oficinas corporativas en todo México.
-        </p>
-        <ul class="institucional__bullets" style="margin-top: var(--space-sm);">
-          <li class="institucional__bullet">
-            <div class="institucional__bullet-text">
-              <strong>Logística Propia</strong>
-              <span>Contamos con unidades dedicadas para garantizar que las entregas se realicen sin mermas ni retrasos.</span>
-            </div>
-          </li>
-          <li class="institucional__bullet">
-            <div class="institucional__bullet-text">
-              <strong>Productos Certificados</strong>
-              <span>Todos los productos de la marca Rumo y distribuidos cuentan con fichas técnicas y hojas de seguridad de acuerdo a normativa.</span>
-            </div>
-          </li>
-        </ul>
-      </div>
-
-      <!-- SVG Map Cobertura -->
-      <div class="map-container reveal reveal--delay-2">
-        <svg class="map-svg" viewBox="0 0 600 400" width="100%" height="auto" role="img" aria-label="Mapa de Cobertura Nacional de Grupo AES">
-          <rect width="100%" height="100%" fill="none" />
-          
-          <g fill="#e2e6eb" stroke="#ffffff" stroke-width="2">
-            <path d="M80,30 L110,60 L70,160 L50,150 Z" />
-            <path d="M120,70 L250,50 L280,150 L180,180 Z" />
-            <path d="M250,150 L380,180 L420,280 L350,300 L250,220 Z" />
-            <path d="M420,280 L520,250 L530,300 L440,320 Z" />
-          </g>
-
-          <!-- Puntos activos de Cobertura de AES Comercial (Centros principales) -->
-          <!-- CDMX (Centro) -->
-          <circle cx="320" cy="220" r="10" fill="var(--color-comercial)" />
-          <circle cx="320" cy="220" r="18" fill="none" stroke="var(--color-comercial)" stroke-width="2" opacity="0.4" class="diagram-orbit-path" />
-          <text x="340" y="225" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="var(--color-navy)">CDMX y Centro</text>
-
-          <!-- Monterrey (Norte) -->
-          <circle cx="240" cy="110" r="8" fill="var(--color-comercial)" />
-          <text x="255" y="115" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Monterrey</text>
-
-          <!-- Guadalajara (Occidente) -->
-          <circle cx="210" cy="200" r="8" fill="var(--color-comercial)" />
-          <text x="145" y="205" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Guadalajara</text>
-
-          <!-- Bajío -->
-          <circle cx="280" cy="180" r="8" fill="var(--color-comercial)" />
-          <text x="295" y="185" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Bajío</text>
-        </svg>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================ -->
-<!-- FORMULARIO DE CONTACTO / CTA FINAL                            -->
-<!-- ============================================================ -->
-<section id="contacto-interno" class="cta-final" style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
-  <div class="container">
-    <div class="institucional__grid">
-
-      <!-- Texto CTA -->
-      <div class="reveal" style="color: var(--color-white);">
-        <span class="cta-final__label">Cotización consolidada</span>
-        <h2 class="cta-final__title" style="margin-bottom: var(--space-sm); font-size: var(--text-3xl);">
-          Consolida tu abastecimiento
+        <h2
+          style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 800; color: var(--color-navy); text-transform: uppercase; line-height: 1.1; margin-bottom: var(--space-sm);">
+          Rumo: Productos de limpieza profesional
         </h2>
-        <p class="cta-final__body" style="margin-bottom: var(--space-md); text-align: left; max-width: 100%;">
-          Solicita una cotización de mayoreo o programa de entrega recurrente para los insumos de tu organización.
+        <p style="font-size: var(--text-base); color: var(--color-gray); line-height: 1.6;">
+          Desarrollamos formulaciones químicas de alta eficiencia y rendimiento optimizado. Rumo es la marca propia de
+          Grupo AES diseñada para cumplir los más altos estándares de higiene corporativa e industrial.
         </p>
-        <div class="footer-contact-item" style="color: rgba(255,255,255,0.72); margin-bottom: var(--space-xs);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--color-comercial);"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91"/></svg>
-          <span>Línea directa: 999 230 5980</span>
-        </div>
-        <div class="footer-contact-item" style="color: rgba(255,255,255,0.72);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="color: var(--color-comercial);"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>Atención 24h: ventas@grupoaes.mx</span>
-        </div>
       </div>
 
-      <!-- Formulario Card -->
-      <div class="contact-form-card reveal reveal--delay-2">
-        <h3 class="form-title">Solicitar Cotización</h3>
-        <p class="form-desc">Escribe la lista de insumos o volumen aproximado mensual que requieres.</p>
-        
-        <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Solicitud de cotización enviada (Boceto demo).');">
-          <div class="form-group">
-            <label class="form-label" for="nombre">Nombre completo</label>
-            <input class="form-input" type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+      <!-- Product catalog mock -->
+      <div class="product-grid">
+
+        <div class="product-card reveal">
+          <div class="product-card__img-wrap">
+            <!-- SVG representacional de botella de Limpiador Multiusos -->
+            <svg viewBox="0 0 100 150" width="60" height="100">
+              <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640" />
+              <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#35a8e0" />
+              <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2" />
+              <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold"
+                fill="#162640">rumo</text>
+            </svg>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="empresa">Empresa</label>
-            <input class="form-input" type="text" id="empresa" name="empresa" required placeholder="Ej. Corporativo Peninsular">
+          <div class="product-card__body">
+            <span class="product-card__category">Químicos</span>
+            <h4 class="product-card__title">Limpiador Multiusos</h4>
+            <p class="product-card__desc">Poder desengrasante concentrado con aromas duraderos.</p>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="correo">Correo corporativo</label>
-            <input class="form-input" type="email" id="correo" name="correo" required placeholder="juan@empresa.com">
+        </div>
+
+        <div class="product-card reveal reveal--delay-1">
+          <div class="product-card__img-wrap">
+            <svg viewBox="0 0 100 150" width="60" height="100">
+              <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640" />
+              <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#2d7a3e" />
+              <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2" />
+              <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold"
+                fill="#162640">rumo</text>
+            </svg>
           </div>
-          <div class="form-group">
-            <label class="form-label" for="mensaje">Detalle de Insumos / Volumen</label>
-            <textarea class="form-textarea" id="mensaje" name="mensaje" required placeholder="Ej. 10 cajas de toallas interdobladas Rumo, 5 galones de limpiador multiusos..."></textarea>
+          <div class="product-card__body">
+            <span class="product-card__category">Sanitizantes</span>
+            <h4 class="product-card__title">Sanitizante de Superficies</h4>
+            <p class="product-card__desc">Elimina el 99.9% de bacterias sin dañar materiales.</p>
           </div>
-          <button class="btn btn--primary" type="submit" style="width: 100%; justify-content: center; background-color: var(--color-comercial); border-color: var(--color-comercial);">
-            Enviar cotización
-          </button>
-        </form>
+        </div>
+
+        <div class="product-card reveal reveal--delay-2">
+          <div class="product-card__img-wrap">
+            <svg viewBox="0 0 100 150" width="60" height="100">
+              <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640" />
+              <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#e52d22" />
+              <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2" />
+              <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold"
+                fill="#162640">rumo</text>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Lavandería</span>
+            <h4 class="product-card__title">Detergente Líquido</h4>
+            <p class="product-card__desc">Fórmula de alta concentración para uniformes y mantelería.</p>
+          </div>
+        </div>
+
+        <div class="product-card reveal reveal--delay-3">
+          <div class="product-card__img-wrap">
+            <svg viewBox="0 0 100 150" width="60" height="100">
+              <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640" />
+              <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#81868e" />
+              <rect x="30" y="60" width="40" height="40" fill="#ffffff" rx="2" />
+              <text x="50" y="85" text-anchor="middle" font-family="sans-serif" font-size="10" font-weight="bold"
+                fill="#162640">rumo</text>
+            </svg>
+          </div>
+          <div class="product-card__body">
+            <span class="product-card__category">Cuidado Corporal</span>
+            <h4 class="product-card__title">Jabón Líquido Manos</h4>
+            <p class="product-card__desc">Suave con la piel, ideal para tránsitos institucionales elevados.</p>
+          </div>
+        </div>
+
       </div>
 
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ============================================================ -->
-<!-- FOOTER                                                        -->
-<!-- ============================================================ -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
+  <!-- ============================================================ -->
+  <!-- COBERTURA NACIONAL                                            -->
+  <!-- ============================================================ -->
+  <section id="cobertura" class="section">
+    <div class="container">
+      <div class="institucional__grid">
 
-    <div class="footer-grid">
-
-      <!-- Brand -->
-      <div class="footer-brand">
-        <img
-          class="footer-brand__logo"
-          src="assets/logos/grupo-aes-oscuro.svg"
-          alt="Grupo AES"
-          width="200"
-          height="38"
-          loading="lazy"
-        >
-        <p class="footer-brand__desc">
-          Administración Estratégica de Servicios. Seguridad privada, limpieza
-          profesional y suministro de insumos para empresas en México.
-        </p>
-        <div class="footer-socials">
-          <a href="#" class="footer-social-link" aria-label="LinkedIn de Grupo AES">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/>
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="Facebook de Grupo AES">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
-            </svg>
-          </a>
-          <a href="#" class="footer-social-link" aria-label="Instagram de Grupo AES">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-              <circle cx="12" cy="12" r="4"/>
-              <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
-            </svg>
-          </a>
+        <!-- Texto -->
+        <div class="reveal">
+          <span class="section-label">Red Logística</span>
+          <h2 class="section-title">Cobertura de distribución</h2>
+          <div class="section-divider"
+            style="background-color: var(--color-comercial); margin-bottom: var(--space-md);"></div>
+          <p class="institucional__body">
+            Entregamos consumibles directamente en tus naves industriales, centros de distribución y oficinas
+            corporativas en todo México.
+          </p>
+          <ul class="institucional__bullets" style="margin-top: var(--space-sm);">
+            <li class="institucional__bullet">
+              <div class="institucional__bullet-text">
+                <strong>Logística Propia</strong>
+                <span>Contamos con unidades dedicadas para garantizar que las entregas se realicen sin mermas ni
+                  retrasos.</span>
+              </div>
+            </li>
+            <li class="institucional__bullet">
+              <div class="institucional__bullet-text">
+                <strong>Productos Certificados</strong>
+                <span>Todos los productos de la marca Rumo y distribuidos cuentan con fichas técnicas y hojas de
+                  seguridad de acuerdo a normativa.</span>
+              </div>
+            </li>
+          </ul>
         </div>
+
+        <!-- SVG Map Cobertura -->
+        <div class="map-container reveal reveal--delay-2">
+          <svg class="map-svg" viewBox="0 0 600 400" width="100%" height="auto" role="img"
+            aria-label="Mapa de Cobertura Nacional de Grupo AES">
+            <rect width="100%" height="100%" fill="none" />
+
+            <g fill="#e2e6eb" stroke="#ffffff" stroke-width="2">
+              <path d="M80,30 L110,60 L70,160 L50,150 Z" />
+              <path d="M120,70 L250,50 L280,150 L180,180 Z" />
+              <path d="M250,150 L380,180 L420,280 L350,300 L250,220 Z" />
+              <path d="M420,280 L520,250 L530,300 L440,320 Z" />
+            </g>
+
+            <!-- Puntos activos de Cobertura de AES Comercial (Centros principales) -->
+            <!-- CDMX (Centro) -->
+            <circle cx="320" cy="220" r="10" fill="var(--color-comercial)" />
+            <circle cx="320" cy="220" r="18" fill="none" stroke="var(--color-comercial)" stroke-width="2" opacity="0.4"
+              class="diagram-orbit-path" />
+            <text x="340" y="225" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700"
+              fill="var(--color-navy)">CDMX y Centro</text>
+
+            <!-- Monterrey (Norte) -->
+            <circle cx="240" cy="110" r="8" fill="var(--color-comercial)" />
+            <text x="255" y="115" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
+              fill="var(--color-navy)">Monterrey</text>
+
+            <!-- Guadalajara (Occidente) -->
+            <circle cx="210" cy="200" r="8" fill="var(--color-comercial)" />
+            <text x="145" y="205" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
+              fill="var(--color-navy)">Guadalajara</text>
+
+            <!-- Bajío -->
+            <circle cx="280" cy="180" r="8" fill="var(--color-comercial)" />
+            <text x="295" y="185" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
+              fill="var(--color-navy)">Bajío</text>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- FORMULARIO DE CONTACTO / CTA FINAL                            -->
+  <!-- ============================================================ -->
+  <section id="contacto-interno" class="cta-final"
+    style="padding-top: var(--space-xl); padding-bottom: var(--space-xl);">
+    <div class="container">
+      <div class="institucional__grid">
+
+        <!-- Texto CTA -->
+        <div class="reveal" style="color: var(--color-white);">
+          <span class="cta-final__label">Cotización consolidada</span>
+          <h2 class="cta-final__title" style="margin-bottom: var(--space-sm); font-size: var(--text-3xl);">
+            Consolida tu abastecimiento
+          </h2>
+          <p class="cta-final__body" style="margin-bottom: var(--space-md); text-align: left; max-width: 100%;">
+            Solicita una cotización de mayoreo o programa de entrega recurrente para los insumos de tu organización.
+          </p>
+          <div class="footer-contact-item" style="color: rgba(255,255,255,0.72); margin-bottom: var(--space-xs);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true" style="color: var(--color-comercial);">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91" />
+            </svg>
+            <span>Línea directa: 999 230 5980</span>
+          </div>
+          <div class="footer-contact-item" style="color: rgba(255,255,255,0.72);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true" style="color: var(--color-comercial);">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>Atención 24h: ventas@grupoaes.mx</span>
+          </div>
+        </div>
+
+        <!-- Formulario Card -->
+        <div class="contact-form-card reveal reveal--delay-2">
+          <h3 class="form-title">Solicitar Cotización</h3>
+          <p class="form-desc">Escribe la lista de insumos o volumen aproximado mensual que requieres.</p>
+
+          <form action="#" method="POST"
+            onsubmit="event.preventDefault(); alert('Solicitud de cotización enviada (Boceto demo).');">
+            <div class="form-group">
+              <label class="form-label" for="nombre">Nombre completo</label>
+              <input class="form-input" type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Pérez">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="empresa">Empresa</label>
+              <input class="form-input" type="text" id="empresa" name="empresa" required
+                placeholder="Ej. Corporativo Peninsular">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="correo">Correo corporativo</label>
+              <input class="form-input" type="email" id="correo" name="correo" required placeholder="juan@empresa.com">
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="mensaje">Detalle de Insumos / Volumen</label>
+              <textarea class="form-textarea" id="mensaje" name="mensaje" required
+                placeholder="Ej. 10 cajas de toallas interdobladas Rumo, 5 galones de limpiador multiusos..."></textarea>
+            </div>
+            <button class="btn btn--primary" type="submit"
+              style="width: 100%; justify-content: center; background-color: var(--color-comercial); border-color: var(--color-comercial);">
+              Enviar cotización
+            </button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- FOOTER                                                        -->
+  <!-- ============================================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <img class="footer-brand__logo" src="assets/logos/grupo-aes-oscuro.svg" alt="Grupo AES" width="200"
+            height="38" loading="lazy">
+          <p class="footer-brand__desc">
+            Administración Estratégica de Servicios. Seguridad privada, limpieza
+            profesional y suministro de insumos para empresas en México.
+          </p>
+          <div class="footer-socials">
+            <a href="#" class="footer-social-link" aria-label="LinkedIn de Grupo AES">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Facebook de Grupo AES">
+              <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z" />
+              </svg>
+            </a>
+            <a href="#" class="footer-social-link" aria-label="Instagram de Grupo AES">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Empresas -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Empresas</h3>
+          <ul class="footer-col__links">
+            <li><a class="footer-col__link" href="seguridad.html">AES Seguridad</a></li>
+            <li><a class="footer-col__link" href="limpieza.html">AES Limpieza</a></li>
+            <li><a class="footer-col__link" href="comercial.html">AES Comercial</a></li>
+            <li><a class="footer-col__link" href="#">Rumo</a></li>
+          </ul>
+        </div>
+
+        <!-- Servicios -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Servicios</h3>
+          <ul class="footer-col__links">
+            <li><a class="footer-col__link" href="seguridad.html#servicios">Guardias de seguridad</a></li>
+            <li><a class="footer-col__link" href="seguridad.html#servicios">Control de accesos</a></li>
+            <li><a class="footer-col__link" href="limpieza.html#servicios">Limpieza institucional</a></li>
+            <li><a class="footer-col__link" href="limpieza.html#servicios">Limpieza industrial</a></li>
+            <li><a class="footer-col__link" href="#servicios">Insumos profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Contacto -->
+        <div class="footer-col">
+          <h3 class="footer-col__title">Contacto</h3>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91" />
+            </svg>
+            <span>999 230 5980</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+              <polyline points="22,6 12,13 2,6" />
+            </svg>
+            <span>ventas@grupoaes.mx</span>
+          </div>
+          <div class="footer-contact-item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="10" r="3" />
+              <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z" />
+            </svg>
+            <span>Mérida, Yucatán, México</span>
+          </div>
+        </div>
+
       </div>
 
-      <!-- Empresas -->
-      <div class="footer-col">
-        <h3 class="footer-col__title">Empresas</h3>
-        <ul class="footer-col__links">
-          <li><a class="footer-col__link" href="seguridad.html">AES Seguridad</a></li>
-          <li><a class="footer-col__link" href="limpieza.html">AES Limpieza</a></li>
-          <li><a class="footer-col__link" href="comercial.html">AES Comercial</a></li>
-          <li><a class="footer-col__link" href="#">Rumo</a></li>
-        </ul>
-      </div>
-
-      <!-- Servicios -->
-      <div class="footer-col">
-        <h3 class="footer-col__title">Servicios</h3>
-        <ul class="footer-col__links">
-          <li><a class="footer-col__link" href="seguridad.html#servicios">Guardias de seguridad</a></li>
-          <li><a class="footer-col__link" href="seguridad.html#servicios">Control de accesos</a></li>
-          <li><a class="footer-col__link" href="limpieza.html#servicios">Limpieza institucional</a></li>
-          <li><a class="footer-col__link" href="limpieza.html#servicios">Limpieza industrial</a></li>
-          <li><a class="footer-col__link" href="#servicios">Insumos profesionales</a></li>
-        </ul>
-      </div>
-
-      <!-- Contacto -->
-      <div class="footer-col">
-        <h3 class="footer-col__title">Contacto</h3>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8a2 2 0 012-2.18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91"/></svg>
-          <span>999 230 5980</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          <span>ventas@grupoaes.mx</span>
-        </div>
-        <div class="footer-contact-item">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="10" r="3"/><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/></svg>
-          <span>Mérida, Yucatán, México</span>
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <span class="footer-bottom__copy">
+          &copy; 2026 Grupo AES. Todos los derechos reservados.
+        </span>
+        <div class="footer-bottom__logo">
+          <img src="assets/logos/grupo-aes-oscuro.svg" alt="Grupo AES" width="100" height="20" loading="lazy">
         </div>
       </div>
 
     </div>
-
-    <!-- Bottom bar -->
-    <div class="footer-bottom">
-      <span class="footer-bottom__copy">
-        &copy; 2024 Grupo AES. Todos los derechos reservados.
-      </span>
-      <div class="footer-bottom__logo">
-        <img
-          src="assets/logos/grupo-aes-oscuro.svg"
-          alt="Grupo AES"
-          width="100"
-          height="20"
-          loading="lazy"
-        >
-      </div>
-    </div>
-
-  </div>
-</footer>
+  </footer>
 
 
-<!-- Scripts -->
-<script src="js/main.js" defer></script>
+  <!-- Scripts -->
+  <script src="js/main.js" defer></script>
 
 </body>
+
 </html>
