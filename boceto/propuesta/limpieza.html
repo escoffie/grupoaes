@@ -43,16 +43,33 @@
   <div class="container">
     <div class="header-inner">
 
-      <!-- Logo -->
-      <a href="index.html#inicio" class="site-logo" aria-label="Grupo AES — Inicio">
-        <img
-          src="assets/logos/grupo-aes-claro.svg"
-          alt="Grupo AES — Administración Estratégica de Servicios"
-          width="220"
-          height="40"
-          fetchpriority="high"
-        >
-      </a>
+      <!-- Co-Branded Logos (Endorsed Branding) -->
+      <div class="site-logo-wrap" style="display: flex; align-items: center; gap: 16px;">
+        <!-- Logo Grupo AES (Back to Home) -->
+        <a href="index.html#inicio" class="site-logo" aria-label="Grupo AES — Inicio">
+          <img
+            src="assets/logos/grupo-aes-claro.svg"
+            alt="Grupo AES"
+            width="130"
+            height="24"
+            fetchpriority="high"
+          >
+        </a>
+        
+        <!-- Vertical Divider -->
+        <span style="height: 20px; width: 1px; background-color: var(--color-gray-light); display: inline-block;"></span>
+        
+        <!-- Logo AES Limpieza -->
+        <a href="#inicio-limpieza" class="site-logo" aria-label="AES Limpieza — Inicio" style="display: flex; align-items: center; text-decoration: none;">
+          <img
+            src="assets/logos/aes-limpieza.svg"
+            alt="AES Limpieza"
+            width="140"
+            height="28"
+            loading="lazy"
+          >
+        </a>
+      </div>
 
       <!-- Nav -->
       <nav class="site-nav" id="main-nav" aria-label="Navegación principal">
