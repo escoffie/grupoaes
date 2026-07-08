@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100">
+  <text x="0" y="78" font-family="Arial, sans-serif" font-size="80" font-weight="900" fill="#162640" letter-spacing="-2">rumo</text>
+  <circle cx="278" cy="18" r="10" fill="#2d7a3e"/>
+  <circle cx="292" cy="10" r="6" fill="#2d7a3e" opacity="0.5"/>
+</svg>

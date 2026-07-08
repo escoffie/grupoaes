@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Capa_2" data-name="Capa 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1455.15 534.99">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #f6f6f6;
+      }
+
+      .cls-3 {
+        fill: #e52d22;
+      }
+
+      .cls-4 {
+        letter-spacing: .2em;
+      }
+
+      .cls-5 {
+        letter-spacing: .19em;
+      }
+
+      .cls-2 {
+        font-family: Arial-BoldMT, Arial;
+        font-size: 60.49px;
+        font-weight: 700;
+      }
+
+      .cls-6 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-7 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-8 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-9 {
+        fill: #81868e;
+        font-family: SklowRegular, Sklow;
+        font-size: 148.64px;
+      }
+    </style>
+  </defs>
+  <g id="Capa_1-2" data-name="Capa 1">
+    <g>
+      <text class="cls-9" transform="translate(0 268.98)"><tspan class="cls-4" x="0" y="0">GR</tspan><tspan class="cls-5" x="262.79" y="0">U</tspan><tspan class="cls-4" x="389.72" y="0">PO</tspan></text>
+      <rect class="cls-3" x="668.78" width="12.71" height="434.25"/>
+      <polygon class="cls-1" points="871.67 80.97 854.85 80.97 718.21 349.93 781.01 349.93 861.46 187.84 938.91 349.93 1000.14 349.93 871.67 80.97"/>
+      <path class="cls-1" d="M1420.99,154.22l27.62-45.03s-52.83-47.43-108.67-28.22c-55.83,19.21-70.24,51.03-57.63,101.46,2.4,12.61,20.57,39.71,68.14,50.43,63.94,14.41,58.95,61.21,29.72,68.44-41.88,10.36-82.25-29.8-82.25-29.8l-38.42,36.4s34.82,37.22,82.85,45.63c48.03,8.41,78.65-13.81,78.65-13.81,0,0,75.65-62.44,1.8-127.28,0,0-26.79-17.99-71.44-32.42,0,0-43.35-16.6-7.8-46.23,25.22-21.01,77.45,20.41,77.45,20.41Z"/>
+      <rect class="cls-1" x="1038.19" y="80.97" width="178.31" height="52.16"/>
+      <rect class="cls-1" x="1038.19" y="297.78" width="176.28" height="52.16"/>
+      <rect class="cls-1" x="1038.19" y="184.69" width="147.91" height="52.16"/>
+      <text class="cls-2" transform="translate(20.04 512.22)"><tspan x="0" y="0">ADMINISTRACIÓN ESTR</tspan><tspan class="cls-6" x="709.09" y="0">A</tspan><tspan x="748.29" y="0">TÉGIC</tspan><tspan class="cls-8" x="933.13" y="0">A</tspan><tspan x="974.57" y="0" xml:space="preserve"> DE SE</tspan><tspan class="cls-7" x="1172.92" y="0">R</tspan><tspan x="1215.51" y="0">VICIOS</tspan></text>
+    </g>
+  </g>
+</svg>
