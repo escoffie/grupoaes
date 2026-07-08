@@ -1,6 +1,15 @@
 Arquitectura SEO/SEM - Páginas Internas Grupo AES
 
+---
+### Información de Contacto Oficial (Grupo AES Mérida)
+- **Ubicación**: Mérida, Yucatán, México
+- **Teléfono**: `999 230 5980`
+- **Correo Electrónico**: `ventas@grupoaes.mx`
+- **Facebook**: `https://www.facebook.com/profile.php?id=61584620919716`
+---
+
 #
+
 
 AES SEGURIDAD
 
