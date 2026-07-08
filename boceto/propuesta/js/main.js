@@ -102,37 +102,11 @@
 
 
 /* ------------------------------------------------------------ */
-/* 5. DIAGRAM — SVG ORBIT ANIMATION                             */
+/* 5. DIAGRAM — KEEP STATIC (DESIGN DECISION)                    */
 /* ------------------------------------------------------------ */
 (function initDiagramAnimation() {
-  const diagram = document.querySelector('.institucional-diagram-svg');
-  if (!diagram) return;
-
-  // Nodes rotate slowly around center on hover of diagram container
-  const orbitGroup = diagram.querySelector('.orbit-group');
-  if (!orbitGroup) return;
-
-  let angle = 0;
-  let animFrame;
-  let isHovering = false;
-
-  const animate = () => {
-    if (isHovering) {
-      angle += 0.3;
-      orbitGroup.setAttribute('transform', `rotate(${angle} 200 200)`);
-      animFrame = requestAnimationFrame(animate);
-    }
-  };
-
-  diagram.addEventListener('mouseenter', () => {
-    isHovering = true;
-    animate();
-  });
-
-  diagram.addEventListener('mouseleave', () => {
-    isHovering = false;
-    cancelAnimationFrame(animFrame);
-  });
+  // El diagrama se mantiene estático por compatibilidad robusta en navegadores.
+  // Los nodos ya están orientados verticalmente por defecto en el HTML/SVG.
 })();
 
 
