@@ -278,3 +278,27 @@
     }
   });
 })();
+
+
+/* ------------------------------------------------------------ */
+/* 8. SUTIL PARALLAX PARA EL BANNER INSTITUCIONAL                */
+/* ------------------------------------------------------------ */
+(function initParallax() {
+  const banner = document.querySelector('.por-que__banner');
+  const img = document.querySelector('.por-que__banner img');
+  if (!banner || !img) return;
+
+  window.addEventListener('scroll', () => {
+    const rect = banner.getBoundingClientRect();
+    const viewHeight = window.innerHeight;
+    
+    // Solo recalculamos si el banner está visible en el viewport
+    if (rect.top < viewHeight && rect.bottom > 0) {
+      // Calculamos el porcentaje de scroll dentro de la sección
+      const scrollPercent = (viewHeight - rect.top) / (viewHeight + rect.height);
+      // Mapeamos a un desplazamiento mayor (entre -60px y 60px)
+      const yOffset = (scrollPercent - 0.5) * 120; 
+      img.style.transform = `scale(1.2) translateY(${yOffset}px)`;
+    }
+  }, { passive: true });
+})();
