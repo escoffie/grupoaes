@@ -19,9 +19,9 @@
   <!-- Grupo contenedor con la sombra global de la estructura circular completa -->
   <g class="espiral-container" filter="url(#global-shadow)">
     
-    <!-- BASE INFERIOR (Gris Claro / Blanco 3D) - Radio exterior: 185 -->
+    <!-- BASE INFERIOR (Gris Claro / Blanco 3D) - Radio exterior: 165 (el más corto de todos) -->
     <path class="espiral-base" 
-          d="M 65 250 A 185 185 0 0 0 435 250 L 335 250 A 85 85 0 0 1 165 250 Z" 
+          d="M 85 250 A 165 165 0 0 0 415 250 L 335 250 A 85 85 0 0 1 165 250 Z" 
           fill="#f8fafc" 
           stroke="#e2e8f0" 
           stroke-width="1.5"/>
@@ -33,7 +33,7 @@
             stroke="#cc2a36" 
             stroke-width="1"/>
       <image href="assets/logos/aes-comercial.svg" 
-             x="330" y="150" 
+             x="330" y="168" 
              width="90" height="60"/>
     </g>
 
@@ -44,7 +44,7 @@
             stroke="#008f80" 
             stroke-width="1"/>
       <image href="assets/logos/aes-limpieza.svg" 
-             x="245" y="65" 
+             x="240" y="77" 
              width="95" height="65"/>
     </g>
 
@@ -55,14 +55,14 @@
             stroke="#111f35" 
             stroke-width="1"/>
       <image href="assets/logos/aes-seguridad.svg" 
-             x="70" y="105" 
+             x="77" y="120" 
              width="100" height="70"/>
     </g>
 
-    <!-- 4. ANILLO/CENTRO BLANCO (Grupo AES) - Con sombra sobre todo el centro -->
+    <!-- 4. ANILLO/CENTRO BLANCO (Grupo AES) - Con sombra sobre todo el centro (Logo central: AES oscuro.svg) -->
     <g class="centro-hub" filter="url(#hub-shadow)">
       <circle cx="250" cy="250" r="85" fill="#ffffff" stroke="#e2e8f0" stroke-width="1.2"/>
-      <image href="assets/logos/grupo-aes-oscuro.svg" 
+      <image href="assets/logos/aes-oscuro-central.svg" 
              x="185" y="215" 
              width="130" height="70"/>
     </g>
