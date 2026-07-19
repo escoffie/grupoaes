@@ -615,7 +615,7 @@ button {
 
 .empresa-card__image-wrap {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
 }
 
@@ -660,10 +660,8 @@ button {
 }
 
 .empresa-card__logo-badge {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
+  margin: -3.5rem auto var(--space-sm) auto;
   z-index: 5;
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -679,7 +677,7 @@ button {
 }
 
 .empresa-card:hover .empresa-card__logo-badge {
-  transform: translate(-50%, -50%) scale(1.05) translateY(-2px);
+  transform: scale(1.05) translateY(-2px);
   box-shadow: var(--shadow-lg);
 }
 
@@ -1066,12 +1064,12 @@ button {
 .industrias__modal-content {
   position: relative;
   z-index: 2;
-  width: 90%;
-  max-width: 960px;
+  width: 95%;
+  max-width: 1020px;
   background-color: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-lg);
-  padding: var(--space-xl) var(--space-lg) var(--space-lg);
+  padding: 3rem var(--space-lg) var(--space-lg) var(--space-lg);
   transform: scale(0.95) translateY(10px);
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   max-height: 90vh;
@@ -1084,8 +1082,8 @@ button {
 
 .industrias__modal-close {
   position: absolute;
-  top: 1.5rem;
-  right: 1.5rem;
+  top: 1.25rem;
+  right: 1.25rem;
   background: none;
   border: none;
   color: var(--color-gray);
@@ -1095,7 +1093,8 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background-color var(--ease-default), color var(--ease-default);
+  transition: background-color var(--ease-default), color var(--ease-default), transform var(--ease-default);
+  z-index: 10;
 }
 
 .industrias__modal-close:hover {
@@ -1108,6 +1107,34 @@ button {
   height: 22px;
 }
 
+.industrias__modal-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: var(--space-lg);
+  align-items: start;
+}
+
+.industrias__modal-image-col {
+  position: relative;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background-color: var(--color-light);
+  aspect-ratio: 3 / 4;
+}
+
+.industrias__modal-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.industrias__modal-info-col {
+  display: flex;
+  flex-direction: column;
+}
+
 .industrias__modal-title {
   font-family: var(--font-heading);
   font-size: var(--text-2xl);
@@ -1115,32 +1142,44 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.05em;
   color: var(--color-navy);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   border-bottom: 2px solid var(--color-light);
   padding-bottom: var(--space-sm);
 }
 
+@media (max-width: 768px) {
+  .industrias__modal-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+  
+  .industrias__modal-image-col {
+    aspect-ratio: 16 / 9;
+    max-height: 200px;
+  }
+}
+
 .industrias__modal-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
 }
 
 .industrias__modal-col {
   background-color: var(--color-light);
-  padding: var(--space-md);
+  padding: 1.25rem var(--space-md);
   border-radius: var(--radius-md);
-  border-top: 4px solid transparent;
+  border-left: 4px solid transparent;
   transition: transform var(--ease-default);
 }
 
 .industrias__modal-col:hover {
-  transform: translateY(-2px);
+  transform: translateX(4px);
 }
 
-.industrias__modal-col.col-seguridad { border-top-color: var(--color-seguridad); }
-.industrias__modal-col.col-limpieza { border-top-color: var(--color-limpieza); }
-.industrias__modal-col.col-comercial { border-top-color: var(--color-comercial); }
+.industrias__modal-col.col-seguridad { border-left-color: var(--color-seguridad); }
+.industrias__modal-col.col-limpieza { border-left-color: var(--color-limpieza); }
+.industrias__modal-col.col-comercial { border-left-color: var(--color-comercial); }
 
 .col-header {
   font-family: var(--font-heading);

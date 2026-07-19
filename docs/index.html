@@ -91,7 +91,7 @@
   <!-- Background image -->
   <img
     class="hero__bg"
-    src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=1920&q=80&auto=format&fit=crop"
+    src="assets/images/hero_home.jpg"
     alt=""
     role="presentation"
     width="1920"
@@ -159,6 +159,15 @@
         <div class="empresa-card__image-wrap">
           <span class="empresa-card__accent"></span>
           <div class="empresa-card__overlay"></div>
+          <img
+            src="assets/images/nuesttras_empresas_aes_seguridad.jpg"
+            alt="Guardia de seguridad en acceso corporativo — AES Seguridad"
+            width="600"
+            height="450"
+            loading="lazy"
+          >
+        </div>
+        <div class="empresa-card__body">
           <div class="empresa-card__logo-badge">
             <img
               class="empresa-card__logo"
@@ -169,15 +178,6 @@
               loading="lazy"
             >
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5?w=600&q=75&auto=format&fit=crop"
-            alt="Guardia de seguridad en acceso corporativo — AES Seguridad"
-            width="600"
-            height="450"
-            loading="lazy"
-          >
-        </div>
-        <div class="empresa-card__body">
           <h3 class="empresa-card__title">AES Seguridad</h3>
           <p class="empresa-card__desc">
             Servicios de seguridad privada, vigilancia, control de accesos, protección
@@ -196,6 +196,15 @@
         <div class="empresa-card__image-wrap">
           <span class="empresa-card__accent"></span>
           <div class="empresa-card__overlay"></div>
+          <img
+            src="assets/images/nuesttras_empresas_aes_limpieza.jpg"
+            alt="Personal de limpieza profesional en oficina — AES Limpieza"
+            width="600"
+            height="450"
+            loading="lazy"
+          >
+        </div>
+        <div class="empresa-card__body">
           <div class="empresa-card__logo-badge">
             <img
               class="empresa-card__logo"
@@ -206,15 +215,6 @@
               loading="lazy"
             >
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&q=75&auto=format&fit=crop"
-            alt="Personal de limpieza profesional en oficina — AES Limpieza"
-            width="600"
-            height="450"
-            loading="lazy"
-          >
-        </div>
-        <div class="empresa-card__body">
           <h3 class="empresa-card__title">AES Limpieza</h3>
           <p class="empresa-card__desc">
             Servicios de limpieza institucional, corporativa e industrial con personal
@@ -233,6 +233,15 @@
         <div class="empresa-card__image-wrap">
           <span class="empresa-card__accent"></span>
           <div class="empresa-card__overlay"></div>
+          <img
+            src="assets/images/nuestras_empresas_aes_comercial.jpg"
+            alt="Almacén con insumos organizados — AES Comercial"
+            width="600"
+            height="450"
+            loading="lazy"
+          >
+        </div>
+        <div class="empresa-card__body">
           <div class="empresa-card__logo-badge">
             <img
               class="empresa-card__logo"
@@ -243,15 +252,6 @@
               loading="lazy"
             >
           </div>
-          <img
-            src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=600&q=75&auto=format&fit=crop"
-            alt="Almacén con insumos organizados — AES Comercial"
-            width="600"
-            height="450"
-            loading="lazy"
-          >
-        </div>
-        <div class="empresa-card__body">
           <h3 class="empresa-card__title">AES Comercial</h3>
           <p class="empresa-card__desc">
             Insumos de limpieza profesional especializados para la operación eficiente
@@ -491,34 +491,41 @@
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
-        <h3 class="industrias__modal-title" id="industrias-title"></h3>
-        <div class="industrias__modal-grid">
-          <div class="industrias__modal-col col-seguridad">
-            <div class="col-header">
-              <span class="col-header__icon col-header__icon--seguridad" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              </span>
-              AES Seguridad
-            </div>
-            <p class="col-text" id="ind-desc-seguridad"></p>
+        <div class="industrias__modal-layout">
+          <div class="industrias__modal-image-col">
+            <img id="industrias-modal-img" class="industrias__modal-img" src="" alt="">
           </div>
-          <div class="industrias__modal-col col-limpieza">
-            <div class="col-header">
-              <span class="col-header__icon col-header__icon--limpieza" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12s1 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-              </span>
-              AES Limpieza
+          <div class="industrias__modal-info-col">
+            <h3 class="industrias__modal-title" id="industrias-title"></h3>
+            <div class="industrias__modal-grid">
+              <div class="industrias__modal-col col-seguridad">
+                <div class="col-header">
+                  <span class="col-header__icon col-header__icon--seguridad" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  AES Seguridad
+                </div>
+                <p class="col-text" id="ind-desc-seguridad"></p>
+              </div>
+              <div class="industrias__modal-col col-limpieza">
+                <div class="col-header">
+                  <span class="col-header__icon col-header__icon--limpieza" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M8 12s1 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+                  </span>
+                  AES Limpieza
+                </div>
+                <p class="col-text" id="ind-desc-limpieza"></p>
+              </div>
+              <div class="industrias__modal-col col-comercial">
+                <div class="col-header">
+                  <span class="col-header__icon col-header__icon--comercial" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+                  </span>
+                  AES Comercial
+                </div>
+                <p class="col-text" id="ind-desc-comercial"></p>
+              </div>
             </div>
-            <p class="col-text" id="ind-desc-limpieza"></p>
-          </div>
-          <div class="industrias__modal-col col-comercial">
-            <div class="col-header">
-              <span class="col-header__icon col-header__icon--comercial" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-              </span>
-              AES Comercial
-            </div>
-            <p class="col-text" id="ind-desc-comercial"></p>
           </div>
         </div>
       </div>

@@ -156,6 +156,7 @@
   const modalClose = document.getElementById('industrias-close');
   const modalBackdrop = document.getElementById('industrias-backdrop');
   const modalTitle = document.getElementById('industrias-title');
+  const modalImg = document.getElementById('industrias-modal-img');
   const descSeguridad = document.getElementById('ind-desc-seguridad');
   const descLimpieza = document.getElementById('ind-desc-limpieza');
   const descComercial = document.getElementById('ind-desc-comercial');
@@ -165,36 +166,42 @@
   const industryData = {
     retail: {
       title: "Retail y Autoservicio",
+      image: "assets/images/home_retail_autoservicio.jpg",
       seguridad: "Diseñamos protocolos de prevención de pérdidas, control de accesos a andenes y vigilancia activa para resguardar la mercancía y la integridad de clientes y colaboradores en tiendas y centros comerciales.",
       limpieza: "Mantenemos pisos relucientes, pasillos despejados y áreas comunes desinfectadas con cuadrillas capacitadas para operar en horarios de alto tráfico comercial sin interferir con la experiencia de compra.",
       comercial: "Suministramos insumos de limpieza de alto rendimiento, dispensadores automatizados e insumos sanitarios ecológicos diseñados para soportar el flujo diario de miles de visitantes."
     },
     manufactura: {
       title: "Industria y Manufactura",
+      image: "assets/images/home_industria_manufactura.jpg",
       seguridad: "Implementamos rigurosos controles de acceso vehicular y peatonal, rondas perimetrales y monitoreo de CCTV alineado con normativas de seguridad industrial y prevención de riesgos ocupacionales.",
       limpieza: "Ofrecemos servicios especializados de limpieza de naves industriales, remoción de residuos aceitosos y mantenimiento sanitario técnico que cumple con los estándares exigidos para la producción limpia.",
       comercial: "Abastecemos insumos de grado industrial, desengrasantes especializados, equipo de protección personal menor y consumibles de limpieza a gran escala para asegurar la continuidad operativa de la planta."
     },
     corporativo: {
       title: "Corporativos y Oficinas",
+      image: "assets/images/home_corporativos_oficinas.jpg",
       seguridad: "Brindamos oficiales de seguridad con perfil ejecutivo, recepción de visitas con control digital y patrullaje de instalaciones corporativas para garantizar la protección de información confidencial y activos tecnológicos.",
       limpieza: "Servicio diario de mantenimiento para oficinas, salas de juntas y áreas comunes, enfocado en mantener un ambiente de trabajo pulcro, ordenado e inspirador para los equipos de trabajo.",
       comercial: "Suministro Premium de jabón líquido, toallas de papel y aromatizantes ambientales de alta gama que proyectan la profesionalidad del espacio corporativo ante clientes y socios."
     },
     logistica: {
       title: "Centros Logísticos",
+      image: "assets/images/home_centros_logisticos.jpg",
       seguridad: "Custodiamos entradas y salidas con verificación estricta de contenedores, control de sellos de seguridad y patrullaje perimetral 24/7 para mitigar riesgos en la cadena de suministro y almacenes.",
       limpieza: "Limpieza profunda de andenes de carga, áreas de almacenamiento masivo y sanitarios operativos mediante equipo especializado de barrido y restregado mecánico industrial.",
       comercial: "Abastecimiento constante de películas plásticas estirables (playo), cintas de empaque y consumibles de limpieza resistentes para el empaquetado y la higiene constante del almacén."
     },
     educacion: {
       title: "Educación",
+      image: "assets/images/home_educacion.jpg",
       seguridad: "Control estricto de accesos perimetrales y peatonales para salvaguardar a alumnos, docentes e infraestructura escolar, con oficiales altamente capacitados en el trato amable, preventivo y cordial.",
       limpieza: "Desinfección periódica y profunda de aulas, laboratorios, bibliotecas y canchas recreativas para asegurar un entorno de aprendizaje seguro y libre de riesgos sanitarios.",
       comercial: "Proveemos jabones antibacteriales, geles desinfectantes y papel sanitario ecológico ideales para el cuidado de la salud en comunidades educativas de alta concentración."
     },
     inmobiliario: {
       title: "Desarrollos Inmobiliarios",
+      image: "assets/images/home_desarrollos_inmobiliarios.jpg",
       seguridad: "Resguardamos condominios residenciales y desarrollos habitacionales mediante control estricto de residentes/proveedores, rondines programados y monitoreo inteligente de accesos perimetrales.",
       limpieza: "Limpieza estética y conservación de áreas comunes, albercas, gimnasios y lobbies, garantizando que el desarrollo inmobiliario mantenga su valor comercial y atractivo visual.",
       comercial: "Suministro de productos de mantenimiento de exteriores, insumos higiénicos para casas club y consumibles necesarios para la administración diaria del complejo residencial."
@@ -216,6 +223,10 @@
 
     // Populate data
     modalTitle.textContent = data.title;
+    if (modalImg) {
+      modalImg.src = data.image;
+      modalImg.alt = data.title;
+    }
     descSeguridad.textContent = data.seguridad;
     descLimpieza.textContent = data.limpieza;
     descComercial.textContent = data.comercial;
