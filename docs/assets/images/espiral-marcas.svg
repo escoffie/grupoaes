@@ -26,33 +26,33 @@
           stroke="#e2e8f0" 
           stroke-width="1.5"/>
 
-    <!-- 1. SECTOR AES COMERCIAL (Rojo Pastel, R=185) -->
+    <!-- 1. SECTOR AES COMERCIAL (Verde Claro, R=185) -->
     <g class="sector-group sector-comercial" style="cursor: pointer;">
       <path d="M 380.81 119.19 A 185 185 0 0 1 435 250 L 335 250 A 85 85 0 0 0 310.1 189.9 Z" 
-            fill="#fde8e9" 
-            stroke="#fbc4c6" 
+            fill="#eaf6ec" 
+            stroke="#c8e6ce" 
             stroke-width="1"/>
       <image href="assets/logos/aes-comercial.svg" 
              x="330" y="168" 
              width="90" height="60"/>
     </g>
 
-    <!-- 2. SECTOR AES LIMPIEZA (Turquesa Pastel, R=205) - Con sombra proyectada sobre Comercial -->
+    <!-- 2. SECTOR AES LIMPIEZA (Celeste Claro, R=205) - Con sombra proyectada sobre Comercial -->
     <g class="sector-group sector-limpieza" filter="url(#sector-shadow)" style="cursor: pointer;">
       <path d="M 196.95 52.0 A 205 205 0 0 1 394.95 105.04 L 310.1 189.9 A 85 85 0 0 0 228 167.9 Z" 
-            fill="#dbf5f3" 
-            stroke="#b7ebe6" 
+            fill="#e2f3fc" 
+            stroke="#bde1f7" 
             stroke-width="1"/>
       <image href="assets/logos/aes-limpieza.svg" 
              x="240" y="77" 
              width="95" height="65"/>
     </g>
 
-    <!-- 3. SECTOR AES SEGURIDAD (Azul Pastel, R=225) - Con sombra proyectada sobre Limpieza -->
+    <!-- 3. SECTOR AES SEGURIDAD (Azul Claro, R=225) - Con sombra proyectada sobre Limpieza -->
     <g class="sector-group sector-seguridad" filter="url(#sector-shadow)" style="cursor: pointer;">
       <path d="M 25 250 A 225 225 0 0 1 191.77 32.67 L 228 167.9 A 85 85 0 0 0 165 250 Z" 
-            fill="#e9eff8" 
-            stroke="#cbd8f0" 
+            fill="#e9eff7" 
+            stroke="#c8d8ec" 
             stroke-width="1"/>
       <image href="assets/logos/aes-seguridad.svg" 
              x="77" y="120" 
