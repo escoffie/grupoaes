@@ -856,6 +856,12 @@ button {
   justify-content: center;
 }
 
+@media (min-width: 1024px) {
+  .institucional__graphic-container {
+    max-width: 520px;
+  }
+}
+
 .espiral-marcas-svg {
   width: 100%;
   height: 100%;
