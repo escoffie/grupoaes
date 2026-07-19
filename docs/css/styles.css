@@ -845,57 +845,76 @@ button {
   justify-content: center;
 }
 
-.institucional__video-container {
+.institucional__graphic-container {
   position: relative;
   width: 100%;
   max-width: 440px;
   aspect-ratio: 1;
-  background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
-  overflow: hidden;
+  overflow: visible; /* para permitir que los efectos de hover con scale y shadow se vean completos */
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px dashed rgba(22, 38, 64, 0.15);
 }
 
-.institucional__video {
+.espiral-marcas-svg {
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  display: block;
+  overflow: visible;
 }
 
-.institucional__video-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: rgba(22, 38, 64, 0.02);
-  color: var(--color-navy);
-  padding: var(--space-md);
+/* Espiral de Marcas Interactivo */
+.espiral-container {
+  transform-origin: 250px 250px;
+  transition: transform var(--ease-slow);
 }
 
-.institucional__video-placeholder .play-icon {
-  width: 48px;
-  height: 48px;
-  color: var(--color-red);
-  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.15));
-  animation: pulsePlay 2.5s ease-in-out infinite;
+.sector-group {
+  transition: transform var(--ease-default), filter var(--ease-default), opacity var(--ease-default);
+  transform-origin: 250px 250px;
+  cursor: pointer;
 }
 
-.institucional__video-placeholder .placeholder-text {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--color-gray);
-  text-align: center;
+/* Efectos de Hover interactivos para los sectores */
+.sector-seguridad:hover {
+  transform: scale(1.04) rotate(-1.5deg);
+  filter: drop-shadow(0 8px 16px rgba(22, 38, 64, 0.25));
+}
+
+.sector-limpieza:hover {
+  transform: scale(1.04) rotate(0.5deg);
+  filter: drop-shadow(0 8px 16px rgba(0, 168, 150, 0.25));
+}
+
+.sector-comercial:hover {
+  transform: scale(1.04) rotate(2deg);
+  filter: drop-shadow(0 8px 16px rgba(230, 57, 70, 0.25));
+}
+
+.centro-hub {
+  transition: transform var(--ease-default), filter var(--ease-default);
+  transform-origin: 250px 250px;
+  cursor: pointer;
+}
+
+.centro-hub:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 8px 16px rgba(22, 38, 64, 0.18));
+}
+
+/* Animación sutil de entrada para la espiral completa */
+@keyframes spinIn {
+  from {
+    transform: scale(0.85) rotate(-45deg);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1) rotate(0);
+    opacity: 1;
+  }
+}
+
+.espiral-marcas-svg {
+  animation: spinIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 @keyframes pulsePlay {

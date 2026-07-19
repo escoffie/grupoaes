@@ -327,19 +327,73 @@
         </ul>
       </div>
 
-      <!-- Contenedor del Video Loop (Placeholder) -->
+      <!-- Gráfico Interactivo Espiral de Marcas (SVG) -->
       <div class="institucional__video-wrap reveal reveal--delay-2">
-        <div class="institucional__video-container">
-          <video class="institucional__video" autoplay loop muted playsinline>
-            <!-- <source src="assets/videos/institucional-loop.mp4" type="video/mp4"> -->
-          </video>
-          <!-- Elegant placeholder overlay indicating it is a borderless video loop -->
-          <div class="institucional__video-placeholder">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="play-icon" aria-hidden="true">
-              <polygon points="6 3 20 12 6 21 6 3"/>
-            </svg>
-            <span class="placeholder-text">Video Corporativo Loop</span>
-          </div>
+        <div class="institucional__graphic-container">
+          <svg class="espiral-marcas-svg" viewBox="0 0 500 500" width="100%" height="100%">
+            <defs>
+              <filter id="drop-shadow" x="-10%" y="-10%" width="120%" height="120%">
+                <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#162640" flood-opacity="0.15"/>
+              </filter>
+              <filter id="hub-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#162640" flood-opacity="0.12"/>
+              </filter>
+            </defs>
+
+            <g class="espiral-container">
+              <!-- BASE INFERIOR -->
+              <path class="espiral-base" 
+                    d="M 30 250 A 220 220 0 0 0 470 250 L 335 250 A 85 85 0 0 1 165 250 Z" 
+                    fill="#f4f6f9" 
+                    stroke="#e2e8f0" 
+                    stroke-width="1.5" 
+                    filter="url(#drop-shadow)"/>
+
+              <!-- SECTOR AES SEGURIDAD -->
+              <g class="sector-group sector-seguridad">
+                <path d="M 30 250 A 220 220 0 0 1 193.06 37.5 L 228.08 167.95 A 85 85 0 0 0 165 250 Z" 
+                      fill="#162640" 
+                      stroke="#111f35" 
+                      stroke-width="1"/>
+                <image href="assets/logos/aes-seguridad.svg" 
+                       x="75" y="95" 
+                       width="100" height="70" 
+                       transform="rotate(-35, 125, 130)"/>
+              </g>
+
+              <!-- SECTOR AES LIMPIEZA -->
+              <g class="sector-group sector-limpieza">
+                <path d="M 193.06 37.5 A 220 220 0 0 1 405.56 94.44 L 310.15 189.92 A 85 85 0 0 0 228.08 167.95 Z" 
+                      fill="#00a896" 
+                      stroke="#008f80" 
+                      stroke-width="1"/>
+                <image href="assets/logos/aes-limpieza.svg" 
+                       x="245" y="55" 
+                       width="100" height="70" 
+                       transform="rotate(15, 295, 90)"/>
+              </g>
+
+              <!-- SECTOR AES COMERCIAL -->
+              <g class="sector-group sector-comercial">
+                <path d="M 405.56 94.44 A 220 220 0 0 1 470 250 L 335 250 A 85 85 0 0 0 310.15 189.92 Z" 
+                      fill="#e63946" 
+                      stroke="#cc2a36" 
+                      stroke-width="1"/>
+                <image href="assets/logos/aes-comercial.svg" 
+                       x="365" y="145" 
+                       width="100" height="70" 
+                       transform="rotate(65, 415, 180)"/>
+              </g>
+
+              <!-- ANILLO/CENTRO BLANCO -->
+              <g class="centro-hub" filter="url(#hub-shadow)">
+                <circle cx="250" cy="250" r="85" fill="#ffffff" stroke="#e2e8f0" stroke-width="1"/>
+                <image href="assets/logos/grupo-aes-oscuro.svg" 
+                       x="185" y="215" 
+                       width="130" height="70"/>
+              </g>
+            </g>
+          </svg>
         </div>
       </div>
 
