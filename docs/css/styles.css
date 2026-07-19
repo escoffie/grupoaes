@@ -764,7 +764,7 @@ button {
 .institucional__grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-2xl);
+  gap: 2rem;
   align-items: center;
 }
 
@@ -858,7 +858,7 @@ button {
 
 @media (min-width: 1024px) {
   .institucional__graphic-container {
-    max-width: 580px;
+    max-width: 680px;
   }
 }
 
