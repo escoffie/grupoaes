@@ -882,18 +882,21 @@ button {
 
 /* Efectos de Hover interactivos para los sectores */
 .sector-seguridad:hover {
-  transform: scale(1.04) rotate(-1.5deg);
+  transform: scale(1.08) rotate(-1.5deg);
   filter: drop-shadow(0 8px 16px rgba(22, 38, 64, 0.25));
+  z-index: 10;
 }
 
 .sector-limpieza:hover {
-  transform: scale(1.04) rotate(0.5deg);
+  transform: scale(1.08) rotate(0.5deg);
   filter: drop-shadow(0 8px 16px rgba(0, 168, 150, 0.25));
+  z-index: 10;
 }
 
 .sector-comercial:hover {
-  transform: scale(1.04) rotate(2deg);
+  transform: scale(1.08) rotate(2deg);
   filter: drop-shadow(0 8px 16px rgba(230, 57, 70, 0.25));
+  z-index: 10;
 }
 
 .centro-hub {
@@ -901,11 +904,18 @@ button {
   transform-origin: 250px 250px;
   cursor: pointer;
   opacity: 0;
+  z-index: 20;
 }
 
 .centro-hub:hover {
   transform: scale(1.05);
   filter: drop-shadow(0 8px 16px rgba(22, 38, 64, 0.18));
+  z-index: 20;
+}
+
+.sector-group:focus,
+.centro-hub:focus {
+  outline: none;
 }
 
 .sector-group:focus-visible,
@@ -933,23 +943,28 @@ button {
 
 /* Activación de Animación al entrar al viewport (cuando el contenedor tiene .revealed) */
 .institucional__video-wrap.revealed .centro-hub {
-  animation: popInHub 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  animation: popInHub 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  opacity: 1;
 }
 
 .institucional__video-wrap.revealed .espiral-base {
-  animation: popInBase 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s forwards;
+  animation: popInBase 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
+  opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-comercial {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s forwards;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s;
+  opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-limpieza {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.0s forwards;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.0s;
+  opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-seguridad {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s forwards;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s;
+  opacity: 1;
 }
 
 /* Animaciones de Entrada */

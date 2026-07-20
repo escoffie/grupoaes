@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 161 49" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-274.4775,-329.9)">
+        <g>
+            <g transform="matrix(1,0,0,1,273.9,359.7)">
+                <text x="0px" y="0px" style="font-family:'SklowRegular', 'Sklow';font-size:16.5px;fill:rgb(128,132,139);">G<tspan x="12.491px 23.529px 34.799px 45.144px " y="0px 0px 0px 0px ">RUPO</tspan></text>
+            </g>
+            <rect x="348" y="329.9" width="1.4" height="48.1" style="fill:rgb(196,49,39);"/>
+            <path d="M370.5,338.9L368.6,338.9L353.5,368.7L360.4,368.7L369.4,350.7L377.9,368.7L384.7,368.7L370.5,338.9Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <path d="M431.4,347L434.5,342C434.5,342 428.6,336.7 422.5,338.9C416.3,341 414.7,344.6 416.1,350.1C416.4,351.5 418.4,354.5 423.7,355.7C429,356.9 430.2,362.5 427,363.3C422.4,364.4 417.9,360 417.9,360L413.6,364C413.6,364 417.5,368.1 422.8,369.1C428.1,370.1 431.5,367.6 431.5,367.6C431.5,367.6 439.9,360.7 431.7,353.5C431.7,353.5 428.7,351.5 423.8,349.9C423.8,349.9 419,348.1 422.9,344.8C426.8,341.5 431.5,347.1 431.5,347.1L431.4,347Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <rect x="388.9" y="338.9" width="19.8" height="5.8" style="fill:rgb(33,42,65);"/>
+            <rect x="388.9" y="362.9" width="19.5" height="5.8" style="fill:rgb(35,43,67);"/>
+            <rect x="388.9" y="350.4" width="16.4" height="5.8" style="fill:rgb(33,42,65);"/>
+        </g>
+    </g>
+</svg>

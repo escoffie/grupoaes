@@ -1,0 +1,170 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" width="100%" height="100%">
+  <defs>
+    <!-- Sombra proyectada del conjunto completo -->
+    <filter id="global-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#162640" flood-opacity="0.16"/>
+    </filter>
+    
+    <!-- Filtro de sombra individual para dar volumen entre los sectores -->
+    <filter id="sector-shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="-2" dy="5" stdDeviation="5" flood-color="#0b1220" flood-opacity="0.35"/>
+    </filter>
+
+    <!-- Filtro de sombra exclusivo para el centro-hub -->
+    <filter id="hub-shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="6" stdDeviation="5" flood-color="#162640" flood-opacity="0.2"/>
+    </filter>
+
+    <!-- Degradado radial para darle volumen al círculo central -->
+    <radialGradient id="hub-gradient" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="60%" stop-color="#f3f6f9"/>
+      <stop offset="100%" stop-color="#dce3eb"/>
+    </radialGradient>
+
+    <!-- Degradados lineales para dar volumen a las rebanadas -->
+    <linearGradient id="comercial-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f5fbf6"/>
+      <stop offset="100%" stop-color="#c1eac7"/>
+    </linearGradient>
+
+    <linearGradient id="limpieza-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2fafc"/>
+      <stop offset="100%" stop-color="#badff5"/>
+    </linearGradient>
+
+    <linearGradient id="seguridad-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f7f9fc"/>
+      <stop offset="100%" stop-color="#c5d8ed"/>
+    </linearGradient>
+
+    <linearGradient id="base-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#e2e8f0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Grupo contenedor con la sombra global de la estructura circular completa -->
+  <g class="espiral-container" filter="url(#global-shadow)">
+    
+    <!-- BASE INFERIOR (Gris Claro / Blanco 3D) - Ocupa los restantes 165 grados en la base -->
+    <path class="espiral-base" 
+          d="M 26.92 279.37 A 225 225 0 0 0 473.08 279.37 L 334.27 261.09 A 85 85 0 0 1 165.73 261.09 Z" 
+          fill="url(#base-gradient)" 
+          stroke="#e2e8f0" 
+          stroke-width="1.5"/>
+
+    <!-- 1. SECTOR AES COMERCIAL (Verde Claro, R=225, 65 grados) -->
+    <g class="sector-group sector-comercial" filter="url(#sector-shadow)" style="cursor: pointer;">
+      <path d="M 370.89 60.24 A 225 225 0 0 1 473.08 279.37 L 334.27 261.09 A 85 85 0 0 0 295.67 178.31 Z" 
+            fill="url(#comercial-gradient)" 
+            stroke="#c8e6ce" 
+            stroke-width="1"/>
+      <!-- Logo vectorial de AES Comercial inline -->
+      <g transform="translate(250, 250) rotate(-25) translate(155, 0) rotate(90) scale(0.57777) translate(-45, -52)">
+        <g transform="matrix(1,0,0,1,-545.028777,-172.575467)">
+          <g>
+            <g transform="matrix(0.465407,-0.885097,0.885097,0.465407,118.570627,645.51591)">
+              <path d="M568.3,204.7L567.8,218.1L567.2,235.7C567.2,236.1 567.2,236.5 566.7,236.7L547.5,246.5C547.2,246.6 547.1,246.7 546.9,246.6C546.7,246.5 546.4,246.2 546.5,245.9L547.7,221.2L548.8,196.2C548.8,194.5 550.2,192.6 551.7,191.8L591.3,170.9C593,170 594.9,169.9 596.6,170.9L609.2,178.7L636.4,195.5C638,196.4 638.6,198 638.5,199.9L637.8,214.4L636.4,245.7C636.3,247.8 635.3,249.3 633.4,250.3L586.6,275C585.5,275.6 583.7,275.4 582.7,274.8L566.8,265.1C566.5,264.7 566.4,264.3 566.8,264L617,237.5L618.2,207.6L592.7,191.7L568.3,204.6L568.3,204.7Z" style="fill:rgb(179,34,23);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.465407,-0.885097,0.885097,0.465407,118.570627,645.51591)">
+              <path d="M592.7,191.8L591.9,170.6C591.9,170.6 593.6,169.7 595.7,170.6C597.1,170.9 620.2,185.6 636.4,195.6C636.4,195.6 637.4,196.2 637.9,197.2C638.4,198.2 638.6,199.2 638.5,199.8C638.5,200.5 636.5,245.4 636.5,245.4C636.5,245.4 636.7,248 634.8,249.5L617,237.5L618.2,207.6" style="fill:white;fill-rule:nonzero;"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- 2. SECTOR AES LIMPIEZA (Celeste Claro, R=225, 65 grados) - Con sombra proyectada sobre Comercial -->
+    <g class="sector-group sector-limpieza" filter="url(#sector-shadow)" style="cursor: pointer;">
+      <path d="M 129.11 60.24 A 225 225 0 0 1 370.89 60.24 L 295.67 178.31 A 85 85 0 0 0 204.33 178.31 Z" 
+            fill="url(#limpieza-gradient)" 
+            stroke="#bde1f7" 
+            stroke-width="1"/>
+      <!-- Logo vectorial de AES Limpieza inline -->
+      <g transform="translate(250, 250) rotate(-90) translate(155, 0) rotate(90) scale(0.58427) translate(-44.5, -51.5)">
+        <g transform="matrix(1,0,0,1,-310.3,-30.8)">
+          <g>
+            <path d="M383.6,60.1C383.6,76.2 370.7,89.3 354.8,89.3C338.9,89.3 353.5,89.3 352.8,89.3C359.3,88.8 365.2,85.9 369.5,81.5C376.3,76.4 380.8,68.2 380.8,58.8C380.8,43.6 369,31.2 354.2,30.9L354.8,30.9C370.7,30.9 383.6,44 383.6,60.1Z" style="fill:rgb(103,165,220);fill-rule:nonzero;"/>
+            <path d="M380.8,58.7C380.8,68 376.3,76.3 369.5,81.4C374.3,76.5 377.3,69.7 377.3,62.2C377.3,47.2 365.5,35 350.9,35C336.3,35 334.1,39.5 329.3,46.5C329.5,46 329.8,45.5 330.1,45C335,36.7 344,31 354.2,30.8C368.9,31.1 380.8,43.5 380.8,58.7Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <rect x="348.7" y="100.1" width="21.4" height="6.3" style="fill:rgb(33,42,65);"/>
+            <g>
+              <path d="M328.7,100.1L326.7,100.1L310.3,132.4L317.8,132.4L327.5,113L336.8,132.4L344.1,132.4L328.7,100.1Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+              <path d="M394.7,108.9L398,103.5C398,103.5 391.7,97.8 384.9,100.1C378.2,102.4 376.5,106.2 378,112.3C378.3,113.8 380.5,117.1 386.2,118.4C391.9,119.7 393.3,125.8 389.8,126.6C384.8,127.8 379.9,123 379.9,123L375.3,127.4C375.3,127.4 379.5,131.9 385.3,132.9C391.1,133.9 394.7,131.2 394.7,131.2C394.7,131.2 403.8,123.7 394.9,115.9C394.9,115.9 391.7,113.7 386.3,112C386.3,112 381.1,110 385.4,106.4C389.7,102.8 394.7,108.9 394.7,108.9Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+              <rect x="348.7" y="126.2" width="21.2" height="6.3" style="fill:rgb(35,43,67);"/>
+              <rect x="348.7" y="112.6" width="17.8" height="6.3" style="fill:rgb(33,42,65);"/>
+            </g>
+            <path d="M326.3,75.6C326.3,75.6 330.3,87.8 326.7,95.7C326.7,95.7 333,89.6 346,89.3C343.7,88.5 338.3,85.6 331.1,88.5C331.1,87 331.1,78.9 326.2,75.6L326.3,75.6Z" style="fill:rgb(103,165,220);fill-rule:nonzero;"/>
+            <path d="M328.5,94.3C328.5,94.3 334.5,89.6 346.2,89.2C346.2,89.2 338.5,85.2 331.3,88.4C331.3,88.4 331.3,82.5 329,78.5C329,78.5 330.9,87.1 328.5,94.2L328.5,94.3Z" style="fill:rgb(35,42,67);fill-rule:nonzero;"/>
+            <path d="M344.7,41.4C344.7,41.4 344.7,51.3 334.7,53.3C334.7,53.3 345.1,55.2 344.7,64.6C344.7,64.6 346.3,52.7 355.6,53.5C355.6,53.5 345.9,52 344.7,41.4Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <path d="M361.8,59.5C361.8,59.5 361.8,65.6 355.6,66.9C355.6,66.9 362.1,68.1 361.8,73.9C361.8,73.9 362.8,66.5 368.6,67C368.6,67 362.6,66.1 361.8,59.5Z" style="fill:rgb(113,113,119);fill-rule:nonzero;"/>
+            <path d="M348.2,72.5C348.2,72.5 348.2,76.5 344.2,77.3C344.2,77.3 348.4,78.1 348.2,81.9C348.2,81.9 348.8,77.1 352.6,77.4C352.6,77.4 348.7,76.8 348.2,72.5Z" style="fill:rgb(103,165,220);fill-rule:nonzero;"/>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- 3. SECTOR AES SEGURIDAD (Azul Claro, R=225, 65 grados) - Con sombra proyectada sobre Limpieza -->
+    <g class="sector-group sector-seguridad" filter="url(#sector-shadow)" style="cursor: pointer;">
+      <path d="M 26.92 279.37 A 225 225 0 0 1 129.11 60.24 L 204.33 178.31 A 85 85 0 0 0 165.73 261.09 Z" 
+            fill="url(#seguridad-gradient)" 
+            stroke="#c8d8ec" 
+            stroke-width="1"/>
+      <!-- Logo vectorial de AES Seguridad inline -->
+      <g transform="translate(250, 250) rotate(-155) translate(155, 0) rotate(90) scale(0.60975) translate(-41, -49.5)">
+        <g transform="matrix(1,0,0,1,-76.72681,-172.583688)">
+          <g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M69.6,231.3C69.6,231.3 71.6,191.1 113.2,162.8L154.4,189.3C154.4,189.3 162.4,195.8 165,203C167.6,210.2 168.8,229.8 166.4,245.3L135,261.4C135,261.4 124,266.3 112.1,258.6C100.1,250.9 69.7,231.3 69.7,231.3L69.6,231.3Z" style="fill:rgb(234,234,234);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M72.3,230.2C72.3,230.2 71.5,193.9 113.1,165.5L154.6,191.8C154.6,191.8 162.7,198.3 164.1,205C165.7,212.5 165.8,227.6 163.4,243.1L140.5,256.5C140.5,256.5 126.8,265.2 114.8,257.4C102.8,249.7 72.4,230.1 72.4,230.1L72.3,230.2Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M88,239C88,239 79.2,203.7 112.2,166.8L153.7,193.1C153.7,193.1 161.8,199.6 163.2,206.3C164.6,213 163.9,226.3 162,242.4L142.6,254.2C142.6,254.2 127.8,263.5 115.7,256.8C103.6,250.1 88,239 88,239Z" style="fill:rgb(234,234,234);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M89.8,238.3C89.8,238.3 80.8,208.7 112.2,168.3L152.7,194.4C152.7,194.4 161.2,201.8 162.4,212C163.3,219.6 161.8,224.9 159.9,241L142.3,252.4C142.3,252.4 127.9,261.7 115.8,255C103.7,248.3 89.8,238.4 89.8,238.4L89.8,238.3Z" style="fill:rgb(192,14,26);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M104.7,227.4L103.9,228.6L116.4,249.9L119.2,245.6L111.6,232.8L126.2,234.7L128.9,230.5L104.7,227.4Z" style="fill:rgb(244,244,244);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(0.541973,0.840396,-0.840396,0.541973,233.388982,-2.184921)">
+              <path d="M134.1,192.8L132.2,188.9C132.2,188.9 126.6,190.4 125.4,195.1C124.2,199.8 125.8,202.2 129.8,203.6C130.8,204 133.4,203.9 136.3,201.1C139.2,198.3 143.1,199.8 142.3,202.1C141.2,205.4 136.6,206.4 136.6,206.4L137.4,210.7C137.4,210.7 141.5,210 144.2,207C146.9,204 146.7,201 146.7,201C146.7,201 145.8,193 138,195.2C138,195.2 135.6,196.2 132.6,198.7C132.6,198.7 129.5,200.9 129.1,197.2C128.7,193.5 133.9,192.8 133.9,192.8L134.1,192.8Z" style="fill:rgb(244,244,244);fill-rule:nonzero;"/>
+            </g>
+            <g transform="matrix(1,-0.000315,0.000315,1,2.014195,0.312678)">
+              <rect x="110.5" y="208.8" width="14.6" height="4.3" style="fill:rgb(244,244,244);"/>
+            </g>
+            <g transform="matrix(1,-0.000315,0.000315,1,-12.893057,8.379513)">
+              <rect x="125.4" y="218.4" width="14.6" height="4.3" style="fill:rgb(244,244,244);"/>
+            </g>
+            <g transform="matrix(1,-0.000315,0.000315,1,-5.684522,3.135752)">
+              <rect x="118.2" y="214.5" width="12.1" height="4.3" style="fill:rgb(244,244,244);"/>
+            </g>
+          </g>
+        </g>
+      </g>
+    </g>
+
+    <!-- 4. ANILLO/CENTRO BLANCO (Grupo AES) - Con sombra sobre todo el centro -->
+    <g class="centro-hub" filter="url(#hub-shadow)">
+      <circle cx="250" cy="250" r="85" fill="url(#hub-gradient)" stroke="#e2e8f0" stroke-width="1.2"/>
+      <g transform="translate(185, 230) scale(0.80745)">
+        <g transform="matrix(1,0,0,1,-274.4775,-329.9)">
+          <g>
+            <g transform="matrix(1,0,0,1,273.9,359.7)">
+              <text x="0px" y="0px" style="font-family:'SklowRegular', 'Sklow';font-size:16.5px;fill:rgb(128,132,139);">G<tspan x="12.491px 23.529px 34.799px 45.144px " y="0px 0px 0px 0px ">RUPO</tspan></text>
+            </g>
+            <rect x="348" y="329.9" width="1.4" height="48.1" style="fill:rgb(196,49,39);"/>
+            <path d="M370.5,338.9L368.6,338.9L353.5,368.7L360.4,368.7L369.4,350.7L377.9,368.7L384.7,368.7L370.5,338.9Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <path d="M431.4,347L434.5,342C434.5,342 428.6,336.7 422.5,338.9C416.3,341 414.7,344.6 416.1,350.1C416.4,351.5 418.4,354.5 423.7,355.7C429,356.9 430.2,362.5 427,363.3C422.4,364.4 417.9,360 417.9,360L413.6,364C413.6,364 417.5,368.1 422.8,369.1C428.1,370.1 431.5,367.6 431.5,367.6C431.5,367.6 439.9,360.7 431.7,353.5C431.7,353.5 428.7,351.5 423.8,349.9C423.8,349.9 419,348.1 422.9,344.8C426.8,341.5 431.5,347.1 431.5,347.1L431.4,347Z" style="fill:rgb(33,42,65);fill-rule:nonzero;"/>
+            <rect x="388.9" y="338.9" width="19.8" height="5.8" style="fill:rgb(33,42,65);"/>
+            <rect x="388.9" y="362.9" width="19.5" height="5.8" style="fill:rgb(35,43,67);"/>
+            <rect x="388.9" y="350.4" width="16.4" height="5.8" style="fill:rgb(33,42,65);"/>
+          </g>
+        </g>
+      </g>
+    </g>
+    
+  </g>
+</svg>
