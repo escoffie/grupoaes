@@ -943,27 +943,27 @@ button {
 
 /* Activación de Animación al entrar al viewport (cuando el contenedor tiene .revealed) */
 .institucional__video-wrap.revealed .centro-hub {
-  animation: popInHub 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: popInHub 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
   opacity: 1;
 }
 
 .institucional__video-wrap.revealed .espiral-base {
-  animation: popInBase 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s;
+  animation: popInBase 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.4s backwards;
   opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-comercial {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 0.8s backwards;
   opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-limpieza {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.0s;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.0s backwards;
   opacity: 1;
 }
 
 .institucional__video-wrap.revealed .sector-seguridad {
-  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s;
+  animation: popInSector 0.8s cubic-bezier(0.34, 1.56, 0.64, 1) 1.2s backwards;
   opacity: 1;
 }
 
