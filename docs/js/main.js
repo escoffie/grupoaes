@@ -227,9 +227,9 @@
       modalImg.src = data.image;
       modalImg.alt = data.title;
     }
-    descSeguridad.textContent = data.seguridad;
-    descLimpieza.textContent = data.limpieza;
-    descComercial.textContent = data.comercial;
+    if (descSeguridad) descSeguridad.textContent = data.seguridad;
+    if (descLimpieza) descLimpieza.textContent = data.limpieza;
+    if (descComercial) descComercial.textContent = data.comercial;
 
     // Show modal
     modal.classList.add('is-open');

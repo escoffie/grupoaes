@@ -124,13 +124,12 @@
 
       <div class="hero__eyebrow">
         <span class="hero__eyebrow-line" aria-hidden="true"></span>
-        <span class="hero__eyebrow-text">AES Seguridad</span>
+        <span class="hero__eyebrow-text">Servicios de seguridad privada para empresas</span>
       </div>
 
       <!-- H1 -->
       <h1 class="hero__title">
-        Servicios de Seguridad<br>
-        Privada para Empresas
+        AES SEGURIDAD
       </h1>
 
       <p class="hero__subtitle">
@@ -168,12 +167,11 @@
 <!-- ============================================================ -->
 <!-- NUESTROS SERVICIOS                                            -->
 <!-- ============================================================ -->
-<section id="servicios" class="section">
+<section id="servicios" class="section section--services-bg section--services-seguridad">
   <div class="container">
 
     <div class="empresas__header reveal">
-      <span class="section-label">Soluciones operativas</span>
-      <h2 class="section-title">Nuestros servicios de seguridad</h2>
+      <h2 class="section-title text-light">Nuestros servicios de seguridad</h2>
       <div class="section-divider section-divider--center" style="background-color: var(--color-seguridad);"></div>
     </div>
 
@@ -305,41 +303,7 @@
 
       <!-- SVG Map Placeholder (México simplificado) -->
       <div class="map-container reveal reveal--delay-2">
-        <!-- SVG básico con el contorno geográfico simplificado de México y puntos activos -->
-        <svg class="map-svg" viewBox="0 0 600 400" width="100%" height="auto" role="img" aria-label="Mapa de Cobertura Nacional de Grupo AES">
-          <!-- Océanos y Fondo -->
-          <rect width="100%" height="100%" fill="none" />
-          
-          <!-- Contorno de México simplificado en SVG Paths -->
-          <g fill="#e2e6eb" stroke="#ffffff" stroke-width="2">
-            <!-- Baja California -->
-            <path d="M80,30 L110,60 L70,160 L50,150 Z" />
-            <!-- Norte -->
-            <path d="M120,70 L250,50 L280,150 L180,180 Z" />
-            <!-- Centro y Sur -->
-            <path d="M250,150 L380,180 L420,280 L350,300 L250,220 Z" />
-            <!-- Península Yucatán -->
-            <path d="M420,280 L520,250 L530,300 L440,320 Z" />
-          </g>
-
-          <!-- Puntos activos de Cobertura de AES Seguridad (Centros principales) -->
-          <!-- CDMX (Centro) -->
-          <circle cx="320" cy="220" r="10" fill="var(--color-seguridad)" />
-          <circle cx="320" cy="220" r="18" fill="none" stroke="var(--color-seguridad)" stroke-width="2" opacity="0.4" class="diagram-orbit-path" />
-          <text x="340" y="225" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700" fill="var(--color-navy)">CDMX y Centro</text>
-
-          <!-- Monterrey (Norte) -->
-          <circle cx="240" cy="110" r="8" fill="var(--color-seguridad)" />
-          <text x="255" y="115" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Monterrey</text>
-
-          <!-- Guadalajara (Occidente) -->
-          <circle cx="210" cy="200" r="8" fill="var(--color-seguridad)" />
-          <text x="145" y="205" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Guadalajara</text>
-
-          <!-- Bajío -->
-          <circle cx="280" cy="180" r="8" fill="var(--color-seguridad)" />
-          <text x="295" y="185" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700" fill="var(--color-navy)">Bajío</text>
-        </svg>
+        <img class="map-svg" src="assets/images/mapa-mexico.svg" alt="Mapa de Cobertura Nacional de Grupo AES" width="600" height="400" loading="lazy">
       </div>
 
     </div>
@@ -350,7 +314,7 @@
 <!-- ============================================================ -->
 <!-- SECTORES QUE ATENDEMOS                                        -->
 <!-- ============================================================ -->
-<section class="section">
+<section id="industrias" class="section industrias">
   <div class="container">
 
     <div class="industrias__header reveal">
@@ -361,7 +325,17 @@
 
     <div class="industrias__grid">
 
-      <div class="industria-item reveal">
+      <div class="industria-item reveal reveal--delay-1" data-industry="retail" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
+        <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+            <polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <span class="industria-item__label">Retail y autoservicio</span>
+      </div>
+
+      <div class="industria-item reveal reveal--delay-1" data-industry="manufactura" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
         <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
@@ -371,7 +345,7 @@
         <span class="industria-item__label">Industria y manufactura</span>
       </div>
 
-      <div class="industria-item reveal reveal--delay-1">
+      <div class="industria-item reveal reveal--delay-2" data-industry="corporativo" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
         <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 03 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 021 16z"/>
@@ -380,18 +354,7 @@
         <span class="industria-item__label">Corporativos y oficinas</span>
       </div>
 
-      <div class="industria-item reveal reveal--delay-2">
-        <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <circle cx="9" cy="21" r="1"/>
-            <circle cx="20" cy="21" r="1"/>
-            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
-          </svg>
-        </div>
-        <span class="industria-item__label">Retail y Autoservicio</span>
-      </div>
-
-      <div class="industria-item reveal reveal--delay-1">
+      <div class="industria-item reveal reveal--delay-2" data-industry="logistica" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
         <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <rect x="1" y="3" width="15" height="13"/>
@@ -400,10 +363,10 @@
             <circle cx="18.5" cy="18.5" r="2.5"/>
           </svg>
         </div>
-        <span class="industria-item__label">Centros Logísticos</span>
+        <span class="industria-item__label">Centros logísticos</span>
       </div>
 
-      <div class="industria-item reveal reveal--delay-2">
+      <div class="industria-item reveal reveal--delay-3" data-industry="educacion" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
         <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
@@ -413,17 +376,50 @@
         <span class="industria-item__label">Educación</span>
       </div>
 
-      <div class="industria-item reveal reveal--delay-3">
+      <div class="industria-item reveal reveal--delay-3" data-industry="inmobiliario" role="button" tabindex="0" aria-expanded="false" aria-controls="industrias-details">
         <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-seguridad);">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
             <polygon points="3 9 12 2 21 9 21 20 3 20 3 9"/>
-            <rect x="9" y="14" width="6" height="6"/>
+            <rect x="9" y="14" width="6" height="6" rx="0"/>
           </svg>
         </div>
-        <span class="industria-item__label">Residencial</span>
+        <span class="industria-item__label">Desarrollos inmobiliarios</span>
       </div>
 
     </div>
+
+    <!-- Modal de Detalles de Industrias -->
+    <div class="industrias__modal" id="industrias-modal" aria-hidden="true" role="dialog" aria-labelledby="industrias-title">
+      <div class="industrias__modal-backdrop" id="industrias-backdrop"></div>
+      <div class="industrias__modal-content">
+        <button class="industrias__modal-close" id="industrias-close" aria-label="Cerrar detalles">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="18" y1="6" x2="6" y2="18"/>
+            <line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+        <div class="industrias__modal-layout">
+          <div class="industrias__modal-image-col">
+            <img id="industrias-modal-img" class="industrias__modal-img" src="" alt="">
+          </div>
+          <div class="industrias__modal-info-col">
+            <h3 class="industrias__modal-title" id="industrias-title"></h3>
+            <div class="industrias__modal-grid industrias__modal-grid--single">
+              <div class="industrias__modal-col col-seguridad">
+                <div class="col-header">
+                  <span class="col-header__icon col-header__icon--seguridad" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                  </span>
+                  AES Seguridad
+                </div>
+                <p class="col-text" id="ind-desc-seguridad"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -431,50 +427,50 @@
 <!-- ============================================================ -->
 <!-- ¿POR QUÉ GRUPO AES?                                          -->
 <!-- ============================================================ -->
-<section class="section section--light">
+<section class="section section--light ventajas-competitivas">
   <div class="container">
-    <div class="por-que__grid">
+    <div class="ventajas__grid">
 
       <div class="reveal">
         <span class="section-label">Ventajas competitivas</span>
-        <h2 class="por-que__title">¿Por qué elegir<br>AES Seguridad?</h2>
-        <p class="por-que__subtitle">
+        <h2 class="ventajas__title">¿Por qué elegir<br>AES Seguridad?</h2>
+        <p class="ventajas__subtitle">
           Operamos bajo un esquema de mejora continua y control operativo estricto para asegurar los más altos estándares de calidad del sector.
         </p>
 
-        <ul class="por-que__checklist" role="list">
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+        <ul class="ventajas__checklist" role="list">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Personal capacitado y supervisado
           </li>
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Protocolos personalizados
           </li>
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Atención inmediata
           </li>
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Supervisión operativa continua
           </li>
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Enfoque netamente preventivo
           </li>
-          <li class="por-que__check">
-            <span class="por-que__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
+          <li class="ventajas__check">
+            <span class="ventajas__check-icon" style="background-color: var(--color-seguridad);" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
             </span>
             Coordinación táctica de zona
@@ -482,7 +478,7 @@
         </ul>
       </div>
 
-      <div class="por-que__image-wrap reveal reveal--delay-2">
+      <div class="ventajas__image-wrap reveal reveal--delay-2">
         <img
           src="https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&q=75&auto=format&fit=crop"
           alt="Operación de guardia de seguridad privada con radiocomunicación"
@@ -497,24 +493,7 @@
 </section>
 
 
-<!-- ============================================================ -->
-<!-- MARQUESINA DE CLIENTES                                        -->
-<!-- ============================================================ -->
-<section class="section" aria-label="Nuestros clientes">
-  <div class="container">
-    <div style="text-align: center; margin-bottom: var(--space-md);">
-      <span class="section-label">Confianza empresarial</span>
-      <h3 style="font-family: var(--font-heading); font-size: var(--text-lg); text-transform: uppercase; color: var(--color-navy);">Empresas que confían en nosotros</h3>
-    </div>
-    <div class="marquesina-logos">
-      <span class="marquesina-logo">FEMSA</span>
-      <span class="marquesina-logo">OXXO</span>
-      <span class="marquesina-logo">GEPP</span>
-      <span class="marquesina-logo">BIMBO</span>
-      <span class="marquesina-logo">LIVERPOOL</span>
-    </div>
-  </div>
-</section>
+
 
 
 <!-- ============================================================ -->

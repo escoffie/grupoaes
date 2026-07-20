@@ -1310,6 +1310,153 @@ button {
   }
 }
 
+
+/* ------------------------------------------------------------ */
+/* VENTAJAS COMPETITIVAS (Páginas Interiores)                    */
+/* ------------------------------------------------------------ */
+.ventajas__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xl);
+  align-items: center;
+}
+
+@media (min-width: 992px) {
+  .ventajas__grid {
+    grid-template-columns: 1.2fr 0.8fr;
+  }
+}
+
+.ventajas__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-navy);
+  margin-bottom: var(--space-sm);
+  text-transform: uppercase;
+}
+
+.ventajas__subtitle {
+  font-size: var(--text-md);
+  color: var(--color-gray-dark);
+  margin-bottom: var(--space-md);
+}
+
+.ventajas__checklist {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-xs);
+}
+
+@media (min-width: 576px) {
+  .ventajas__checklist {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ventajas__check {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: var(--text-sm);
+  color: var(--color-navy);
+}
+
+.ventajas__check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  color: var(--color-white);
+}
+
+.ventajas__check-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.ventajas__image-wrap img {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+/* ------------------------------------------------------------ */
+/* SECCIÓN DE SERVICIOS CON FONDO DEGRADADO                       */
+/* ------------------------------------------------------------ */
+.section--services-bg {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-attachment: scroll; /* compatible móvil y desktop */
+  color: var(--color-white);
+  padding-block: var(--space-2xl);
+  z-index: 1;
+}
+
+.section--services-bg::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+/* Degradado específico para Seguridad: de abajo (navy oscuro) a arriba (transparente) */
+.section--services-seguridad {
+  background-image: url('https://images.unsplash.com/photo-1541872703-74c5e44368f9?w=1920&q=70&auto=format&fit=crop'); /* imagen genérica de seguridad */
+}
+
+.section--services-seguridad::before {
+  background: linear-gradient(to top, rgba(14, 25, 41, 0.95) 0%, rgba(14, 25, 41, 0.70) 50%, rgba(14, 25, 41, 0.30) 100%);
+}
+
+/* Degradado específico para Limpieza: de abajo (navy oscuro) a arriba (transparente) */
+.section--services-limpieza {
+  background-image: url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=1920&q=70&auto=format&fit=crop'); /* imagen genérica de limpieza */
+}
+
+.section--services-limpieza::before {
+  background: linear-gradient(to top, rgba(14, 25, 41, 0.95) 0%, rgba(14, 25, 41, 0.70) 50%, rgba(14, 25, 41, 0.30) 100%);
+}
+
+/* Variación de tarjetas de servicios transparentes sobre fondo oscuro */
+.section--services-bg .service-card {
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: var(--color-white);
+  transition: transform var(--ease-normal), background-color var(--ease-normal), border-color var(--ease-normal);
+}
+
+.section--services-bg .service-card__title {
+  color: var(--color-white);
+}
+
+.section--services-bg .service-card__desc {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.section--services-bg .service-card__icon {
+  background-color: rgba(255, 255, 255, 0.12);
+  color: var(--color-white);
+}
+
+.section--services-bg .service-card:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.30);
+  transform: translateY(-6px);
+}
+
+/* Centrado del modal de una sola columna en interiores */
+.industrias__modal-grid--single {
+  grid-template-columns: 1fr !important;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 /* ------------------------------------------------------------ */
 /* 11. ¿POR QUÉ GRUPO AES?                                       */
 /* ------------------------------------------------------------ */
