@@ -27,12 +27,14 @@
 (function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
   const nav    = document.querySelector('.site-nav');
+  const header = document.querySelector('.site-header');
   if (!toggle || !nav) return;
 
   toggle.addEventListener('click', () => {
     const isOpen = toggle.getAttribute('aria-expanded') === 'true';
     toggle.setAttribute('aria-expanded', String(!isOpen));
     nav.classList.toggle('is-open', !isOpen);
+    if (header) header.classList.toggle('menu-is-open', !isOpen);
     document.body.style.overflow = isOpen ? '' : 'hidden';
   });
 
@@ -41,6 +43,7 @@
     link.addEventListener('click', () => {
       toggle.setAttribute('aria-expanded', 'false');
       nav.classList.remove('is-open');
+      if (header) header.classList.remove('menu-is-open');
       document.body.style.overflow = '';
     });
   });
@@ -50,6 +53,7 @@
     if (!toggle.contains(e.target) && !nav.contains(e.target)) {
       toggle.setAttribute('aria-expanded', 'false');
       nav.classList.remove('is-open');
+      if (header) header.classList.remove('menu-is-open');
       document.body.style.overflow = '';
     }
   });

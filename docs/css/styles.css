@@ -1324,7 +1324,7 @@ button {
 .por-que__banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9; /* mobile default */
+  aspect-ratio: 4 / 3; /* mobile default (más alto para albergar textos y evitar cortes) */
   overflow: hidden;
   border-radius: var(--radius-lg);
   margin-bottom: var(--space-xl);
@@ -1755,8 +1755,17 @@ button {
   }
 }
 
-/* Mobile: ≤ 640px */
-@media (max-width: 640px) {
+/* Mobile / Handheld: ≤ 991px */
+@media (max-width: 991px) {
+  :root {
+    --text-hero: clamp(1.85rem, 6.5vw, 2.75rem); /* reduce tamaño tipográfico en mobile para evitar desbordes */
+  }
+
+  .site-header.menu-is-open {
+    height: 100vh;
+    background-color: var(--color-white);
+  }
+
   .site-nav {
     display: none;
     position: fixed;
