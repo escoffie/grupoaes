@@ -96,12 +96,66 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('revealed');
-        observer.unobserve(entry.target);
+        // Para elementos que no sean el contenedor de la espiral, dejamos de observar una vez animados
+        if (!entry.target.classList.contains('institucional__video-wrap')) {
+          observer.unobserve(entry.target);
+        }
+      } else {
+        // Al salir de pantalla, quitamos la clase a la espiral para re-animarla cuando vuelva a entrar
+        if (entry.target.classList.contains('institucional__video-wrap')) {
+          entry.target.classList.remove('revealed');
+        }
       }
     });
   }, { threshold: 0.12 });
 
   targets.forEach(el => observer.observe(el));
+})();
+
+
+/* ------------------------------------------------------------ */
+/* 5. RE-ANIMACIÓN DE ESPIRAL POR CLICK / TAB / ENFOQUE          */
+/* ------------------------------------------------------------ */
+(function initEspiralReplay() {
+  const espiralWrap = document.querySelector('.institucional__video-wrap');
+  if (!espiralWrap) return;
+
+  function replayAnimation() {
+    espiralWrap.classList.remove('revealed');
+    // Forzar reflow en el DOM para reiniciar las transiciones CSS de inmediato
+    void espiralWrap.offsetWidth;
+    espiralWrap.classList.add('revealed');
+  }
+
+  // Clic en el SVG completo
+  const svg = espiralWrap.querySelector('.espiral-marcas-svg');
+  if (svg) {
+    svg.addEventListener('click', replayAnimation);
+  }
+
+  // Hacer el centro-hub y los sectores enfocables con tab para accesibilidad
+  const hub = espiralWrap.querySelector('.centro-hub');
+  const sectors = espiralWrap.querySelectorAll('.sector-group');
+
+  if (hub) {
+    hub.setAttribute('tabindex', '0');
+    hub.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        replayAnimation();
+      }
+    });
+  }
+
+  sectors.forEach(sector => {
+    sector.setAttribute('tabindex', '0');
+    sector.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        replayAnimation();
+      }
+    });
+  });
 })();
 
 

@@ -908,6 +908,12 @@ button {
   filter: drop-shadow(0 8px 16px rgba(22, 38, 64, 0.18));
 }
 
+.sector-group:focus-visible,
+.centro-hub:focus-visible {
+  outline: 2px solid var(--color-red);
+  outline-offset: 4px;
+}
+
 .espiral-base {
   transform-origin: 250px 250px;
   opacity: 0;
