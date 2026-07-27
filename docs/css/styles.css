@@ -442,6 +442,18 @@ button {
   padding-top: 100px; /* offset fixed header */
 }
 
+.hero__brand-logo {
+  margin-bottom: var(--space-md);
+}
+
+.hero__brand-logo-img {
+  width: 100%;
+  max-width: clamp(260px, 50vw, 440px);
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+}
+
 .hero__eyebrow {
   display: flex;
   align-items: flex-start;
