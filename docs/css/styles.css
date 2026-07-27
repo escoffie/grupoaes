@@ -442,16 +442,18 @@ button {
   padding-top: 100px; /* offset fixed header */
 }
 
-.hero__brand-logo {
+.hero__title--logo {
   margin-bottom: var(--space-md);
+  text-transform: none;
+  letter-spacing: normal;
 }
 
 .hero__brand-logo-img {
   width: 100%;
-  max-width: clamp(260px, 50vw, 440px);
+  max-width: clamp(280px, 65vw, 540px);
   height: auto;
   display: block;
-  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 6px 20px rgba(0, 0, 0, 0.45));
 }
 
 .hero__eyebrow {
