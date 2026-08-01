@@ -675,7 +675,7 @@ button {
 
 .empresa-card__logo-badge {
   position: relative;
-  margin: -3.5rem auto var(--space-sm) auto;
+  margin: -3.75rem auto var(--space-sm) auto;
   z-index: 5;
   background-color: var(--color-white);
   border-radius: var(--radius-md);
@@ -683,10 +683,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 260px;
-  height: 104px;
-  padding: var(--space-sm) var(--space-md);
-  max-width: 85%;
+  width: 280px;
+  height: 114px;
+  padding: 0.35rem 0.65rem;
+  max-width: 88%;
   transition: transform var(--ease-slow), box-shadow var(--ease-slow);
 }
 
@@ -696,9 +696,9 @@ button {
 }
 
 .empresa-card__logo {
-  height: 72px;
+  height: 84px;
   width: auto;
-  max-width: 90%;
+  max-width: 95%;
   object-fit: contain;
   margin: 0;
 }
@@ -772,7 +772,36 @@ button {
 /* 8. BLOQUE INSTITUCIONAL                                       */
 /* ------------------------------------------------------------ */
 .institucional {
+  position: relative;
   background-color: var(--color-light);
+  overflow: hidden;
+}
+
+.institucional__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+
+.institucional__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(244, 245, 247, 0.90) 0%,
+    rgba(244, 245, 247, 0.80) 50%,
+    rgba(244, 245, 247, 0.88) 100%
+  );
+  z-index: 1;
+}
+
+.institucional .container {
+  position: relative;
+  z-index: 2;
 }
 
 .institucional__grid {
