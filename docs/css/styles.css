@@ -458,8 +458,8 @@ button {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(14, 25, 41, 0.95) 0%,
-    rgba(14, 25, 41, 0.55) 45%,
+    rgba(14, 25, 41, 0.99) 0%,
+    rgba(14, 25, 41, 0.75) 40%,
     rgba(14, 25, 41, 0.08) 100%
   );
   z-index: 1;
