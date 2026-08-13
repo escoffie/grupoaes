@@ -423,14 +423,44 @@ button {
   /* fetchpriority="high" set in HTML */
 }
 
+.hero__video-wrapper {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+}
+
+.hero__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw; /* Aspecto 16:9 */
+  min-height: 100vh;
+  min-width: 177.77vh; /* Aspecto 16:9 en vh */
+  transform: translate(-50%, -50%) scale(1.5); /* Escala amplia para recortar la interfaz de YouTube */
+  border: 0;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.hero__video.is-playing {
+  opacity: 1;
+}
+
 .hero__overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    105deg,
-    rgba(14, 25, 41, 0.88) 0%,
-    rgba(22, 38, 64, 0.75) 55%,
-    rgba(22, 38, 64, 0.30) 100%
+    to top,
+    rgba(14, 25, 41, 0.96) 0%,
+    rgba(14, 25, 41, 0.85) 50%,
+    rgba(22, 38, 64, 0.72) 100%
   );
   z-index: 1;
 }

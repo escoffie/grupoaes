@@ -206,6 +206,57 @@
 
 
 /* ------------------------------------------------------------ */
+/* 7.5 HERO YOUTUBE BACKGROUND VIDEO (LOOP VIA JS)               */
+/* ------------------------------------------------------------ */
+(function initHeroVideo() {
+  const playerElem = document.getElementById('hero-yt-player');
+  if (!playerElem) return;
+
+  const tag = document.createElement('script');
+  tag.src = 'https://www.youtube.com/iframe_api';
+  const firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  window.onYouTubeIframeAPIReady = function() {
+    new YT.Player('hero-yt-player', {
+      videoId: 'V2LKkwHykb8',
+      playerVars: {
+        autoplay: 1,
+        controls: 0,
+        showinfo: 0,
+        rel: 0,
+        mute: 1,
+        modestbranding: 1,
+        disablekb: 1,
+        fs: 0,
+        playsinline: 1,
+        iv_load_policy: 3,
+        autohide: 1
+      },
+      events: {
+        onReady: function(event) {
+          event.target.mute();
+          event.target.playVideo();
+        },
+        onStateChange: function(event) {
+          if (event.data === YT.PlayerState.PLAYING) {
+            const iframe = event.target.getIframe();
+            if (iframe) {
+              iframe.classList.add('hero__video', 'is-playing');
+            }
+          } else if (event.data === YT.PlayerState.ENDED) {
+            // Loop mediante JS sin requerir el parametro query 'playlist'
+            event.target.seekTo(0);
+            event.target.playVideo();
+          }
+        }
+      }
+    });
+  };
+})();
+
+
+/* ------------------------------------------------------------ */
 /* 8. INDUSTRIES INTERACTIVE MODAL                               */
 /* ------------------------------------------------------------ */
 (function initIndustriesModal() {

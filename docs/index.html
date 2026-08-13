@@ -95,9 +95,14 @@
   <!-- ============================================================ -->
   <section id="inicio" class="hero">
 
-    <!-- Background image -->
+    <!-- Background image (Fallback) -->
     <img class="hero__bg" src="assets/images/home_hero.jpg" alt="" role="presentation" width="1920" height="1080"
       fetchpriority="high" loading="eager">
+
+    <!-- Background video (YouTube Loop via JS without playlist param) -->
+    <div class="hero__video-wrapper" aria-hidden="true">
+      <div id="hero-yt-player"></div>
+    </div>
 
     <!-- Overlay gradient -->
     <div class="hero__overlay" aria-hidden="true"></div>
