@@ -458,9 +458,9 @@ button {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(14, 25, 41, 0.96) 0%,
-    rgba(14, 25, 41, 0.85) 50%,
-    rgba(22, 38, 64, 0.72) 100%
+    rgba(14, 25, 41, 0.95) 0%,
+    rgba(14, 25, 41, 0.55) 45%,
+    rgba(14, 25, 41, 0.08) 100%
   );
   z-index: 1;
 }
@@ -469,7 +469,8 @@ button {
   position: relative;
   z-index: 2;
   max-width: 760px;
-  padding-top: 100px; /* offset fixed header */
+  padding-top: 170px; /* offset fixed header y posicionamiento mas abajo */
+  padding-bottom: 60px;
 }
 
 .hero__title--logo {
