@@ -219,7 +219,7 @@
 
   window.onYouTubeIframeAPIReady = function () {
     new YT.Player('hero-yt-player', {
-      videoId: 'qNJIR8iVXjo',
+      videoId: 'jboO3zolUU4',
       playerVars: {
         autoplay: 1,
         controls: 0,
