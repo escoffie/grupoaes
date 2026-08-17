@@ -26,7 +26,7 @@
 /* ------------------------------------------------------------ */
 (function initMobileNav() {
   const toggle = document.querySelector('.nav-toggle');
-  const nav    = document.querySelector('.site-nav');
+  const nav = document.querySelector('.site-nav');
   const header = document.querySelector('.site-header');
   if (!toggle || !nav) return;
 
@@ -166,7 +166,7 @@
 /* ------------------------------------------------------------ */
 (function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+    anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
 
@@ -217,9 +217,9 @@
   const firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  window.onYouTubeIframeAPIReady = function() {
+  window.onYouTubeIframeAPIReady = function () {
     new YT.Player('hero-yt-player', {
-      videoId: 'V2LKkwHykb8',
+      videoId: 'qNJIR8iVXjo',
       playerVars: {
         autoplay: 1,
         controls: 0,
@@ -234,11 +234,11 @@
         autohide: 1
       },
       events: {
-        onReady: function(event) {
+        onReady: function (event) {
           event.target.mute();
           event.target.playVideo();
         },
-        onStateChange: function(event) {
+        onStateChange: function (event) {
           if (event.data === YT.PlayerState.PLAYING) {
             const iframe = event.target.getIframe();
             if (iframe) {
@@ -269,7 +269,7 @@
   const descSeguridad = document.getElementById('ind-desc-seguridad');
   const descLimpieza = document.getElementById('ind-desc-limpieza');
   const descComercial = document.getElementById('ind-desc-comercial');
-  
+
   if (!industriesGrid || !modal) return;
 
   const industryData = {
@@ -355,7 +355,7 @@
     modal.classList.remove('is-open');
     modal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = ''; // unlock scroll
-    
+
     // Reset active states
     industryItems.forEach(item => {
       item.classList.remove('industria-item--active');
@@ -364,7 +364,7 @@
 
   industryItems.forEach(item => {
     const key = item.getAttribute('data-industry');
-    
+
     item.addEventListener('click', () => {
       openModal(key, item);
     });
@@ -400,13 +400,13 @@
   window.addEventListener('scroll', () => {
     const rect = banner.getBoundingClientRect();
     const viewHeight = window.innerHeight;
-    
+
     // Solo recalculamos si el banner está visible en el viewport
     if (rect.top < viewHeight && rect.bottom > 0) {
       // Calculamos el porcentaje de scroll dentro de la sección
       const scrollPercent = (viewHeight - rect.top) / (viewHeight + rect.height);
       // Mapeamos a un desplazamiento mayor (entre -60px y 60px)
-      const yOffset = (scrollPercent - 0.5) * 120; 
+      const yOffset = (scrollPercent - 0.5) * 120;
       img.style.transform = `scale(1.2) translateY(${yOffset}px)`;
     }
   }, { passive: true });
