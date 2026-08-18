@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" fill="none" role="img" aria-label="IMSS">
+  <!-- Símbolo / Escudo IMSS estilizado -->
+  <g transform="translate(8, 7)">
+    <circle cx="25" cy="25" r="23" stroke="#ffffff" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+    <!-- Silueta Águila / Maternidad estilizada -->
+    <path d="M25 10 C18 10 13 15 13 22 C13 31 25 39 25 39 C25 39 37 31 37 22 C37 15 32 10 25 10 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <circle cx="25" cy="18" r="3.5" fill="#162640"/>
+    <path d="M19 25 C21 23 29 23 31 25 C31 29 25 34 25 34 C25 34 19 29 19 25 Z" fill="#162640"/>
+  </g>
+  <!-- Tipografía IMSS -->
+  <g transform="translate(68, 14)">
+    <text x="0" y="24" font-family="'Montserrat', 'Inter', sans-serif" font-size="24" font-weight="900" letter-spacing="2" fill="#ffffff">IMSS</text>
+    <text x="2" y="36" font-family="'Montserrat', 'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="1.2" fill="#ffffff" opacity="0.8">CUMPLIMIENTO PATRONAL</text>
+  </g>
+</svg>

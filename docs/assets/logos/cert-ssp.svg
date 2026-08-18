@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" fill="none" role="img" aria-label="SSP">
+  <!-- Escudo / Estrella Policial SSP -->
+  <g transform="translate(10, 7)">
+    <path d="M25 4 L44 12 L44 26 C44 38 25 46 25 46 C25 46 6 38 6 26 L6 12 Z" stroke="#ffffff" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+    <path d="M25 10 L29 18 L38 19 L31 25 L33 34 L25 29 L17 34 L19 25 L12 19 L21 18 Z" fill="#ffffff" fill-opacity="0.95"/>
+  </g>
+  <!-- Tipografía SSP -->
+  <g transform="translate(68, 14)">
+    <text x="0" y="24" font-family="'Montserrat', 'Inter', sans-serif" font-size="24" font-weight="900" letter-spacing="2" fill="#ffffff">SSP</text>
+    <text x="2" y="36" font-family="'Montserrat', 'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="1.2" fill="#ffffff" opacity="0.8">SEGURIDAD PÚBLICA</text>
+  </g>
+</svg>

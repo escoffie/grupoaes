@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 64" fill="none" role="img" aria-label="SELLO ROSA">
+  <!-- Símbolo Lazo / Flor Sello Rosa -->
+  <g transform="translate(10, 7)">
+    <circle cx="25" cy="25" r="23" stroke="#ffffff" stroke-width="2" stroke-opacity="0.9" fill="none"/>
+    <!-- Lazo / Silueta estilizada -->
+    <path d="M25 12 C21 12 18 16 20 20 L25 32 L30 20 C32 16 29 12 25 12 Z" fill="#ffffff" fill-opacity="0.95"/>
+    <path d="M21 24 L14 36 C13 38 15 40 17 39 L25 32 L33 39 C35 40 37 38 36 36 L29 24" fill="#ffffff" fill-opacity="0.85"/>
+  </g>
+  <!-- Tipografía SELLO ROSA -->
+  <g transform="translate(68, 14)">
+    <text x="0" y="20" font-family="'Montserrat', 'Inter', sans-serif" font-size="16" font-weight="900" letter-spacing="1.5" fill="#ffffff">SELLO ROSA</text>
+    <text x="2" y="34" font-family="'Montserrat', 'Inter', sans-serif" font-size="7" font-weight="600" letter-spacing="1.2" fill="#ffffff" opacity="0.8">EQUIDAD E INCLUSIÓN</text>
+  </g>
+</svg>

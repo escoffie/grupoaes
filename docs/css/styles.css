@@ -1082,65 +1082,55 @@ button {
 
 
 /* ------------------------------------------------------------ */
-/* 9. DIFERENCIADORES (Barra de stats)                           */
+/* 9. CERTIFICACIONES Y ACREDITACIONES (Pleca azul)             */
 /* ------------------------------------------------------------ */
-.diferenciadores {
+.certificaciones {
   background-color: var(--color-navy);
-  padding-block: var(--space-xl);
+  padding-block: 2.75rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.diferenciadores__grid {
+.certificaciones__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: var(--space-sm);
-}
-
-.diferenciador-item {
-  display: flex;
-  flex-direction: column;
+  gap: var(--space-md);
   align-items: center;
-  text-align: center;
-  padding: var(--space-md) var(--space-sm);
-  border-right: 1px solid rgba(255,255,255,0.1);
-  transition: transform var(--ease-default);
+  justify-items: center;
 }
 
-.diferenciador-item:hover {
-  transform: translateY(-4px);
+.certificacion-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: var(--space-xs) var(--space-sm);
+  border-right: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform var(--ease-default), opacity var(--ease-default);
+  opacity: 0.88;
 }
 
-.diferenciador-item:last-child {
+.certificacion-item:hover {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+.certificacion-item:last-child {
   border-right: none;
 }
 
-.diferenciador-item__icon {
-  width: 52px;
-  height: 52px;
-  margin-bottom: var(--space-sm);
-  color: var(--color-red);
-}
-
-.diferenciador-item__icon svg {
+.certificacion-logo {
+  max-width: 180px;
   width: 100%;
-  height: 100%;
+  height: auto;
+  max-height: 52px;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
+  transition: transform var(--ease-default);
 }
 
-.diferenciador-item__value {
-  font-family: var(--font-heading);
-  font-size: var(--text-3xl);
-  font-weight: 800;
-  color: var(--color-white);
-  line-height: 1;
-  margin-bottom: 0.25rem;
-}
-
-.diferenciador-item__label {
-  font-family: var(--font-heading);
-  font-size: var(--text-sm);
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--color-gray);
+.certificacion-item:hover .certificacion-logo {
+  transform: scale(1.05);
 }
 
 
@@ -2077,22 +2067,23 @@ button {
     order: -1;
   }
 
-  .diferenciadores__grid {
+  .certificaciones__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-sm);
   }
 
-  .diferenciador-item:nth-child(2) {
+  .certificacion-item:nth-child(2) {
     border-right: none;
   }
 
-  .diferenciador-item:nth-child(3) {
-    border-right: 1px solid rgba(255,255,255,0.1);
-    border-top: 1px solid rgba(255,255,255,0.1);
+  .certificacion-item:nth-child(3),
+  .certificacion-item:nth-child(4) {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: var(--space-sm);
   }
 
-  .diferenciador-item:nth-child(4) {
+  .certificacion-item:nth-child(4) {
     border-right: none;
-    border-top: 1px solid rgba(255,255,255,0.1);
   }
 
   .industrias__grid {
@@ -2182,8 +2173,18 @@ button {
 
 
 
-  .diferenciadores__grid {
+  .certificaciones {
+    padding-block: var(--space-md);
+  }
+
+  .certificaciones__grid {
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-xs);
+  }
+
+  .certificacion-logo {
+    max-width: 135px;
+    max-height: 42px;
   }
 
   .footer-grid {
