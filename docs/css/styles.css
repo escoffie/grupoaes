@@ -1626,22 +1626,21 @@ button {
 /* ¿Por qué? - Layout Cinemático */
 .por-que {
   background-color: var(--color-light);
-  padding-block: var(--space-xl); /* padding base de 5rem (80px) */
+  padding-block: var(--space-xl);
   overflow: hidden;
 }
 
-/* Banner cinemático con texto superpuesto */
+/* Banner cinemático con texto y carrusel superpuesto */
 .por-que__banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 3;
+  min-height: 480px;
   overflow: hidden;
   border-radius: var(--radius-lg);
-  margin-bottom: var(--space-xl);
-  box-shadow: 0 20px 40px rgba(22, 38, 64, 0.08);
+  box-shadow: 0 20px 40px rgba(22, 38, 64, 0.12);
   display: flex;
   align-items: center;
-  padding: var(--space-lg);
+  padding: var(--space-xl) var(--space-lg);
   background-color: var(--color-navy-dark);
 }
 
@@ -1651,10 +1650,10 @@ button {
   right: 0;
   bottom: 0;
   left: auto;
-  width: 60%;
+  width: 65%;
   height: 100%;
   object-fit: cover;
-  object-position: center 12%;
+  object-position: center 15%;
   z-index: 0;
 }
 
@@ -1664,9 +1663,9 @@ button {
   background: linear-gradient(
     90deg,
     var(--color-navy-dark) 0%,
-    rgba(14, 25, 41, 0.95) 40%,
-    rgba(14, 25, 41, 0.6) 65%,
-    rgba(14, 25, 41, 0) 100%
+    rgba(14, 25, 41, 0.94) 42%,
+    rgba(14, 25, 41, 0.72) 72%,
+    rgba(14, 25, 41, 0.45) 100%
   );
   pointer-events: none;
   z-index: 1;
@@ -1676,8 +1675,13 @@ button {
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: 55%;
-  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.por-que__banner-text {
+  max-width: 580px;
 }
 
 .por-que__banner-title {
@@ -1693,12 +1697,11 @@ button {
 
 .por-que__banner-subtitle {
   font-size: var(--text-xs);
-  color: var(--color-gray-light);
+  color: #cbd5e1;
   line-height: 1.6;
-  max-width: 480px;
 }
 
-/* Carrusel Infinito de Diferenciadores */
+/* Carrusel Infinito de Diferenciadores (Fondo Traslúcido Glassmorphic) */
 .por-que__carousel {
   container-type: inline-size;
   overflow: hidden;
@@ -1745,19 +1748,21 @@ button {
 .por-que__card {
   flex: 0 0 calc((100cqw - (3.5 * var(--space-sm))) / 4.5);
   width: calc((100cqw - (3.5 * var(--space-sm))) / 4.5);
-  background-color: var(--color-white);
-  padding: 1.75rem 0.85rem;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 1.5rem 0.85rem;
   border-radius: var(--radius-md);
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 2px 8px rgba(22, 38, 64, 0.04);
-  transition: transform var(--ease-default), box-shadow var(--ease-default), border-color var(--ease-default);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: transform var(--ease-default), box-shadow var(--ease-default), border-color var(--ease-default), background-color var(--ease-default);
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 100px;
+  min-height: 94px;
 }
 
 .por-que__card::before {
@@ -1775,8 +1780,9 @@ button {
 
 .por-que__card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(22, 38, 64, 0.08);
-  border-color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.38);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
 }
 
 .por-que__card:hover::before {
@@ -1788,13 +1794,19 @@ button {
   font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: var(--color-navy);
+  color: var(--color-white);
   letter-spacing: 0.02em;
   line-height: 1.35;
   margin: 0;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 991px) {
+  .por-que__banner {
+    min-height: 420px;
+    padding: var(--space-lg) var(--space-md);
+  }
+
   .por-que__card {
     flex: 0 0 calc((100cqw - (2 * var(--space-sm))) / 2.75);
     width: calc((100cqw - (2 * var(--space-sm))) / 2.75);
@@ -1802,6 +1814,11 @@ button {
 }
 
 @media (max-width: 575px) {
+  .por-que__banner {
+    min-height: auto;
+    padding: var(--space-md) var(--space-sm);
+  }
+
   .por-que__card {
     flex: 0 0 calc((100cqw - var(--space-sm)) / 1.6);
     width: calc((100cqw - var(--space-sm)) / 1.6);
@@ -1810,14 +1827,8 @@ button {
 
 /* Media Queries del Banner */
 @media (min-width: 768px) {
-  .por-que__banner {
-    padding: var(--space-xl);
-    aspect-ratio: 2.1 / 1;
-  }
-  
   .por-que__banner-title {
     font-size: var(--text-3xl);
-    margin-bottom: var(--space-sm);
   }
   
   .por-que__banner-subtitle {
@@ -1827,26 +1838,12 @@ button {
 
 @media (min-width: 1024px) {
   .por-que {
-    padding-block: var(--space-2xl); /* padding amplio de 8rem (128px) en desktop */
+    padding-block: var(--space-2xl);
   }
 
   .por-que__banner {
-    padding: var(--space-2xl);
-    aspect-ratio: 2.3 / 1; /* cinemático extendido en desktop */
-  }
-
-  .por-que__banner-overlay {
-    background: linear-gradient(
-      90deg,
-      var(--color-navy-dark) 0%,
-      var(--color-navy-dark) 35%,
-      rgba(14, 25, 41, 0.85) 50%,
-      rgba(14, 25, 41, 0) 90%
-    );
-  }
-
-  .por-que__banner-content {
-    max-width: 55%;
+    min-height: 500px;
+    padding: 3.5rem 3rem 2.5rem;
   }
 }
 
