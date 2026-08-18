@@ -1711,15 +1711,15 @@ button {
 
 .por-que__track {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   width: max-content;
 }
 
 .por-que__track-group {
   display: flex;
-  gap: var(--space-md);
+  gap: var(--space-sm);
   flex-shrink: 0;
-  animation: porQueInfiniteScroll 22s linear infinite;
+  animation: porQueInfiniteScroll 20s linear infinite;
   will-change: transform;
 }
 
@@ -1738,15 +1738,15 @@ button {
     transform: translateX(0);
   }
   to {
-    transform: translateX(calc(-100% - var(--space-md)));
+    transform: translateX(calc(-100% - var(--space-sm)));
   }
 }
 
 .por-que__card {
-  flex: 0 0 calc((100cqw - (2 * var(--space-md))) / 3);
-  width: calc((100cqw - (2 * var(--space-md))) / 3);
+  flex: 0 0 calc((100cqw - (3.5 * var(--space-sm))) / 4.5);
+  width: calc((100cqw - (3.5 * var(--space-sm))) / 4.5);
   background-color: var(--color-white);
-  padding: 1.5rem 1.25rem;
+  padding: 1.15rem 0.85rem;
   border-radius: var(--radius-md);
   border: 1px solid #e2e8f0;
   box-shadow: 0 2px 8px rgba(22, 38, 64, 0.04);
@@ -1757,7 +1757,7 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-  min-height: 84px;
+  min-height: 72px;
 }
 
 .por-que__card::before {
@@ -1785,26 +1785,26 @@ button {
 
 .por-que__card-title {
   font-family: var(--font-heading);
-  font-size: var(--text-sm);
+  font-size: 0.8125rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-navy);
   letter-spacing: 0.02em;
-  line-height: 1.35;
+  line-height: 1.3;
   margin: 0;
 }
 
 @media (max-width: 991px) {
   .por-que__card {
-    flex: 0 0 calc((100cqw - var(--space-md)) / 2);
-    width: calc((100cqw - var(--space-md)) / 2);
+    flex: 0 0 calc((100cqw - (2 * var(--space-sm))) / 2.75);
+    width: calc((100cqw - (2 * var(--space-sm))) / 2.75);
   }
 }
 
 @media (max-width: 575px) {
   .por-que__card {
-    flex: 0 0 calc(100cqw - 1.5rem);
-    width: calc(100cqw - 1.5rem);
+    flex: 0 0 calc((100cqw - var(--space-sm)) / 1.6);
+    width: calc((100cqw - var(--space-sm)) / 1.6);
   }
 }
 
