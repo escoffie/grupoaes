@@ -2349,6 +2349,195 @@ button {
   transition: fill var(--ease-default);
 }
 
+/* ============================================================
+   CAPACIDAD OPERATIVA (Páginas de servicio)
+   ============================================================ */
+.capacidad-operativa {
+  background-color: var(--color-light);
+  padding-block: var(--space-xl);
+}
+
+.capacidad-operativa__header {
+  text-align: center;
+  max-width: 680px;
+  margin-inline: auto;
+  margin-bottom: var(--space-xl);
+}
+
+.capacidad-operativa__subtitle {
+  font-size: var(--text-md);
+  color: var(--color-navy);
+  font-weight: 500;
+  margin-top: 0.35rem;
+  margin-bottom: var(--space-xs);
+}
+
+.capacidad-operativa__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: var(--space-lg);
+  align-items: stretch;
+}
+
+.capacidad-operativa__features,
+.capacidad-operativa__coverage {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  padding: var(--space-lg);
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 20px rgba(22, 38, 64, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.capacidad-operativa__card-title {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: var(--space-md);
+}
+
+.capacidad-operativa__card-title svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-seguridad);
+  flex-shrink: 0;
+}
+
+/* Lista de Características / Pilares */
+.capacidad-operativa__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.capacidad-operativa__item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-md);
+  background-color: #f8fafc;
+  border: 1px solid #edf2f7;
+  transition: transform var(--ease-default), border-color var(--ease-default), background-color var(--ease-default);
+}
+
+.capacidad-operativa__item:hover {
+  transform: translateX(4px);
+  border-color: #cbd5e1;
+  background-color: #f1f5f9;
+}
+
+.capacidad-operativa__item-icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: rgba(30, 77, 138, 0.12);
+  color: var(--color-seguridad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.capacidad-operativa__item-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+.capacidad-operativa__item-text {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--color-navy);
+  letter-spacing: 0.01em;
+}
+
+/* Cobertura / Ciudades */
+.capacidad-operativa__matrix-badge {
+  background: linear-gradient(135deg, rgba(30, 77, 138, 0.08) 0%, rgba(30, 77, 138, 0.03) 100%);
+  border: 1.5px solid var(--color-seguridad);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1.15rem;
+  color: var(--color-navy);
+  font-size: 0.95rem;
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.matrix-badge__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-seguridad);
+  display: inline-block;
+  box-shadow: 0 0 0 4px rgba(30, 77, 138, 0.2);
+  flex-shrink: 0;
+}
+
+.matrix-badge__tag {
+  display: inline-block;
+  background-color: var(--color-seguridad);
+  color: var(--color-white);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.2rem 0.55rem;
+  border-radius: var(--radius-full);
+  margin-left: 0.4rem;
+  vertical-align: middle;
+}
+
+.capacidad-operativa__cities-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.city-tag {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  color: var(--color-navy);
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  font-weight: 600;
+  transition: all var(--ease-default);
+}
+
+.city-tag:hover {
+  background-color: var(--color-navy);
+  color: var(--color-white);
+  border-color: var(--color-navy);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(22, 38, 64, 0.12);
+}
+
+@media (max-width: 991px) {
+  .capacidad-operativa__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-md);
+  }
+
+  .capacidad-operativa__features,
+  .capacidad-operativa__coverage {
+    padding: var(--space-md);
+  }
+}
+
 .map-state--active {
   fill: var(--color-seguridad);
 }
