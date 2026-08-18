@@ -1634,13 +1634,14 @@ button {
 .por-que__banner {
   position: relative;
   width: 100%;
-  min-height: 480px;
+  min-height: 440px;
   overflow: hidden;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 40px rgba(22, 38, 64, 0.12);
   display: flex;
-  align-items: center;
-  padding: var(--space-xl) var(--space-lg);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: var(--space-xl) var(--space-lg) 1.5rem;
   background-color: var(--color-navy-dark);
 }
 
@@ -1714,7 +1715,8 @@ button {
   overflow: hidden;
   width: 100%;
   position: relative;
-  padding-block: var(--space-xs);
+  padding-top: var(--space-xs);
+  padding-bottom: 0;
   mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
   -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
 }
@@ -1810,8 +1812,8 @@ button {
 
 @media (max-width: 991px) {
   .por-que__banner {
-    min-height: 420px;
-    padding: var(--space-lg) var(--space-md);
+    min-height: auto;
+    padding: var(--space-lg) var(--space-md) 1.5rem;
   }
 
   .por-que__card {
@@ -1823,7 +1825,7 @@ button {
 @media (max-width: 575px) {
   .por-que__banner {
     min-height: auto;
-    padding: var(--space-md) var(--space-sm);
+    padding: var(--space-md) var(--space-sm) 1.5rem;
   }
 
   .por-que__card {
@@ -1849,8 +1851,8 @@ button {
   }
 
   .por-que__banner {
-    min-height: 500px;
-    padding: 3.5rem 3rem 2.5rem;
+    min-height: 460px;
+    padding: 3.5rem 3rem 1.5rem;
   }
 }
 
