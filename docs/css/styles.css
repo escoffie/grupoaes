@@ -1785,7 +1785,7 @@ button {
 
 .por-que__card-title {
   font-family: var(--font-heading);
-  font-size: 0.9375rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   color: var(--color-navy);
