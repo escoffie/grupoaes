@@ -1698,21 +1698,66 @@ button {
   max-width: 480px;
 }
 
-/* Grid de tarjetas responsivas */
-.por-que__cards-grid {
-  display: grid;
-  grid-template-columns: 1fr;
+/* Carrusel Infinito de Diferenciadores */
+.por-que__carousel {
+  container-type: inline-size;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding-block: var(--space-xs);
+  mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 2.5%, black 97.5%, transparent 100%);
+}
+
+.por-que__track {
+  display: flex;
   gap: var(--space-md);
+  width: max-content;
+}
+
+.por-que__track-group {
+  display: flex;
+  gap: var(--space-md);
+  flex-shrink: 0;
+  animation: porQueInfiniteScroll 22s linear infinite;
+  will-change: transform;
+}
+
+.por-que__carousel:hover .por-que__track-group {
+  animation-play-state: paused;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .por-que__track-group {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes porQueInfiniteScroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - var(--space-md)));
+  }
 }
 
 .por-que__card {
+  flex: 0 0 calc((100cqw - (2 * var(--space-md))) / 3);
+  width: calc((100cqw - (2 * var(--space-md))) / 3);
   background-color: var(--color-white);
-  padding: var(--space-md) var(--space-lg);
+  padding: 1.5rem 1.25rem;
   border-radius: var(--radius-md);
   border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 8px rgba(22, 38, 64, 0.04);
   transition: transform var(--ease-default), box-shadow var(--ease-default), border-color var(--ease-default);
   position: relative;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  min-height: 84px;
 }
 
 .por-que__card::before {
@@ -1729,23 +1774,13 @@ button {
 }
 
 .por-que__card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(22, 38, 64, 0.06);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(22, 38, 64, 0.08);
   border-color: #cbd5e1;
 }
 
 .por-que__card:hover::before {
   transform: scaleY(1);
-}
-
-.por-que__card-num {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: var(--text-lg);
-  font-weight: 800;
-  color: var(--color-red);
-  margin-bottom: var(--space-xs);
-  opacity: 0.85;
 }
 
 .por-que__card-title {
@@ -1755,22 +1790,25 @@ button {
   text-transform: uppercase;
   color: var(--color-navy);
   letter-spacing: 0.02em;
-  margin-bottom: 6px;
+  line-height: 1.35;
+  margin: 0;
 }
 
-.por-que__card-text {
-  font-size: var(--text-xs);
-  color: var(--color-gray);
-  line-height: 1.5;
-}
-
-/* Media Queries */
-@media (min-width: 550px) {
-  .por-que__cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+@media (max-width: 991px) {
+  .por-que__card {
+    flex: 0 0 calc((100cqw - var(--space-md)) / 2);
+    width: calc((100cqw - var(--space-md)) / 2);
   }
 }
 
+@media (max-width: 575px) {
+  .por-que__card {
+    flex: 0 0 calc(100cqw - 1.5rem);
+    width: calc(100cqw - 1.5rem);
+  }
+}
+
+/* Media Queries del Banner */
 @media (min-width: 768px) {
   .por-que__banner {
     padding: var(--space-xl);
@@ -1809,11 +1847,6 @@ button {
 
   .por-que__banner-content {
     max-width: 55%;
-  }
-
-  .por-que__cards-grid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: var(--space-lg);
   }
 }
 
