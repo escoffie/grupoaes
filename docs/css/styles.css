@@ -1660,13 +1660,20 @@ button {
 .por-que__banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    var(--color-navy-dark) 0%,
-    rgba(14, 25, 41, 0.94) 42%,
-    rgba(14, 25, 41, 0.72) 72%,
-    rgba(14, 25, 41, 0.45) 100%
-  );
+  background: 
+    linear-gradient(
+      78deg,
+      var(--color-navy-dark) 0%,
+      var(--color-navy-dark) 26%,
+      rgba(14, 25, 41, 0.9) 42%,
+      rgba(14, 25, 41, 0.5) 68%,
+      rgba(14, 25, 41, 0.08) 100%
+    ),
+    linear-gradient(
+      0deg,
+      rgba(14, 25, 41, 0.65) 0%,
+      rgba(14, 25, 41, 0) 48%
+    );
   pointer-events: none;
   z-index: 1;
 }
