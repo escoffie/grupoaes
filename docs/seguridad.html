@@ -264,112 +264,196 @@
         <div class="section-divider section-divider--center" style="background-color: var(--color-seguridad);"></div>
       </div>
 
-      <div class="capacidad-operativa__grid">
+      <!-- 1. Grid de Pilares Operativos (6 Tarjetas con íconos temáticos) -->
+      <div class="capacidad-operativa__pillars-grid">
 
-        <!-- Columna 1: Características Operativas -->
-        <div class="capacidad-operativa__features reveal reveal--delay-1">
-          <h3 class="capacidad-operativa__card-title">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+        <!-- 1. Supervisión en campo -->
+        <div class="capacidad-pillar-card reveal">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+              <circle cx="12" cy="12" r="3"/>
             </svg>
-            Pilares operativos
-          </h3>
-          <ul class="capacidad-operativa__list">
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Supervisión en campo</span>
-            </li>
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Reclutamiento permanente</span>
-            </li>
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Cobertura de incidencias</span>
-            </li>
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Personal de relevo</span>
-            </li>
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Protocolos operativos</span>
-            </li>
-            <li class="capacidad-operativa__item">
-              <div class="capacidad-operativa__item-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-              </div>
-              <span class="capacidad-operativa__item-text">Atención inmediata</span>
-            </li>
-          </ul>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Supervisión en campo</h3>
         </div>
 
-        <!-- Columna 2: Ciudades / Presencia Nacional -->
-        <div class="capacidad-operativa__coverage reveal reveal--delay-2">
-          <div class="capacidad-operativa__coverage-header">
-            <h3 class="capacidad-operativa__card-title">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <circle cx="12" cy="10" r="3" />
-                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z" />
-              </svg>
-              Presencia y cobertura nacional
-            </h3>
-            <div class="capacidad-operativa__matrix-badge">
-              <span class="matrix-badge__dot"></span>
-              <div>
-                <strong>Mérida, Yucatán</strong> <span class="matrix-badge__tag">Matriz operativa</span>
-              </div>
-            </div>
+        <!-- 2. Reclutamiento permanente -->
+        <div class="capacidad-pillar-card reveal reveal--delay-1">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <polyline points="16 11 18 13 22 9"/>
+            </svg>
           </div>
+          <h3 class="capacidad-pillar-card__title">Reclutamiento permanente</h3>
+        </div>
 
-          <div class="capacidad-operativa__cities-grid">
-            <span class="city-tag">Cancún</span>
-            <span class="city-tag">Oaxaca</span>
-            <span class="city-tag">Villahermosa</span>
-            <span class="city-tag">Tuxtla Gutiérrez</span>
-            <span class="city-tag">Veracruz</span>
-            <span class="city-tag">CDMX</span>
-            <span class="city-tag">León</span>
-            <span class="city-tag">Tapachula</span>
-            <span class="city-tag">Chetumal</span>
-            <span class="city-tag">Playa del Carmen</span>
-            <span class="city-tag">Campeche</span>
-            <span class="city-tag">Guadalajara</span>
-            <span class="city-tag">Querétaro</span>
-            <span class="city-tag">Guanajuato</span>
-            <span class="city-tag">San Luis Potosí</span>
-            <span class="city-tag">Aguascalientes</span>
-            <span class="city-tag">Torreón</span>
-            <span class="city-tag">Durango</span>
-            <span class="city-tag">Saltillo</span>
-            <span class="city-tag">Monterrey</span>
-            <span class="city-tag">Zacatecas</span>
+        <!-- 3. Cobertura de incidencias -->
+        <div class="capacidad-pillar-card reveal reveal--delay-2">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              <line x1="12" y1="8" x2="12" y2="12"/>
+              <line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
           </div>
+          <h3 class="capacidad-pillar-card__title">Cobertura de incidencias</h3>
+        </div>
+
+        <!-- 4. Personal de relevo -->
+        <div class="capacidad-pillar-card reveal reveal--delay-1">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+              <circle cx="9" cy="7" r="4"/>
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+              <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Personal de relevo</h3>
+        </div>
+
+        <!-- 5. Protocolos operativos -->
+        <div class="capacidad-pillar-card reveal reveal--delay-2">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Protocolos operativos</h3>
+        </div>
+
+        <!-- 6. Atención inmediata -->
+        <div class="capacidad-pillar-card reveal reveal--delay-3">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Atención inmediata</h3>
         </div>
 
       </div>
+
+      <!-- 2. Panel Ejecutivo de Presencia y Cobertura Territorial -->
+      <div class="capacidad-cobertura reveal reveal--delay-2">
+        <div class="capacidad-cobertura__header">
+          <div class="capacidad-cobertura__title-wrap">
+            <div class="capacidad-cobertura__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="capacidad-cobertura__title">Presencia y Cobertura Nacional</h3>
+              <p class="capacidad-cobertura__desc">Despliegue operativo coordinado en plazas estratégicas de México</p>
+            </div>
+          </div>
+
+          <div class="capacidad-matriz-card">
+            <span class="capacidad-matriz-card__ping"></span>
+            <div>
+              <span class="capacidad-matriz-card__label">Matriz operativa</span>
+              <strong class="capacidad-matriz-card__city">Mérida, Yucatán</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="capacidad-ciudades__grid">
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Cancún</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Oaxaca</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Villahermosa</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Tuxtla Gutiérrez</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Veracruz</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">CDMX</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">León</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Tapachula</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Chetumal</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Playa del Carmen</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Campeche</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Guadalajara</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Querétaro</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Guanajuato</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">San Luis Potosí</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Aguascalientes</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Torreón</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Durango</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Saltillo</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Monterrey</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Zacatecas</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

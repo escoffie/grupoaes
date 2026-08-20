@@ -2372,169 +2372,275 @@ button {
   margin-bottom: var(--space-xs);
 }
 
-.capacidad-operativa__grid {
+/* 1. Grid de Pilares Operativos (6 Tarjetas) */
+.capacidad-operativa__pillars-grid {
   display: grid;
-  grid-template-columns: 1fr 1.35fr;
-  gap: var(--space-lg);
-  align-items: stretch;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
 }
 
-.capacidad-operativa__features,
-.capacidad-operativa__coverage {
+.capacidad-pillar-card {
   background-color: var(--color-white);
-  border-radius: var(--radius-lg);
-  padding: var(--space-lg);
   border: 1px solid #e2e8f0;
-  box-shadow: 0 4px 20px rgba(22, 38, 64, 0.05);
-  display: flex;
-  flex-direction: column;
-}
-
-.capacidad-operativa__card-title {
-  font-family: var(--font-heading);
-  font-size: 1.05rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  color: var(--color-navy);
-  letter-spacing: 0.04em;
+  border-radius: var(--radius-md);
+  padding: 1.35rem 1.25rem;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  margin-bottom: var(--space-md);
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(22, 38, 64, 0.04);
+  transition: transform var(--ease-default), box-shadow var(--ease-default), border-color var(--ease-default);
 }
 
-.capacidad-operativa__card-title svg {
+.capacidad-pillar-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background-color: var(--color-seguridad);
+  transform: scaleY(0);
+  transform-origin: bottom;
+  transition: transform var(--ease-default);
+}
+
+.capacidad-pillar-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(22, 38, 64, 0.08);
+  border-color: #cbd5e1;
+}
+
+.capacidad-pillar-card:hover::before {
+  transform: scaleY(1);
+}
+
+.capacidad-pillar-card__icon {
+  width: 46px;
+  height: 46px;
+  border-radius: var(--radius-sm);
+  background-color: rgba(30, 74, 122, 0.08);
+  color: var(--color-seguridad);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background-color var(--ease-default), color var(--ease-default);
+}
+
+.capacidad-pillar-card:hover .capacidad-pillar-card__icon {
+  background-color: var(--color-seguridad);
+  color: var(--color-white);
+}
+
+.capacidad-pillar-card__icon svg {
   width: 22px;
   height: 22px;
-  color: var(--color-seguridad);
-  flex-shrink: 0;
 }
 
-/* Lista de Características / Pilares */
-.capacidad-operativa__list {
-  list-style: none;
-  padding: 0;
+.capacidad-pillar-card__title {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-navy);
+  letter-spacing: 0.02em;
+  line-height: 1.3;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
 }
 
-.capacidad-operativa__item {
+/* 2. Panel Ejecutivo de Presencia y Cobertura Territorial */
+.capacidad-cobertura {
+  background-color: var(--color-navy);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  margin-top: var(--space-xl);
+  color: var(--color-white);
+  box-shadow: 0 20px 40px rgba(22, 38, 64, 0.14);
+  position: relative;
+  overflow: hidden;
+}
+
+.capacidad-cobertura::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 100%;
+  background: radial-gradient(circle at 100% 0%, rgba(30, 74, 122, 0.35) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.capacidad-cobertura__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-md);
+  padding-bottom: 1.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  margin-bottom: 1.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.capacidad-cobertura__title-wrap {
   display: flex;
   align-items: center;
-  gap: 0.85rem;
-  padding: 0.85rem 1rem;
-  border-radius: var(--radius-md);
-  background-color: #f8fafc;
-  border: 1px solid #edf2f7;
-  transition: transform var(--ease-default), border-color var(--ease-default), background-color var(--ease-default);
+  gap: 1rem;
 }
 
-.capacidad-operativa__item:hover {
-  transform: translateX(4px);
-  border-color: #cbd5e1;
-  background-color: #f1f5f9;
-}
-
-.capacidad-operativa__item-icon {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background-color: rgba(30, 77, 138, 0.12);
-  color: var(--color-seguridad);
+.capacidad-cobertura__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--color-white);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
 }
 
-.capacidad-operativa__item-icon svg {
-  width: 14px;
-  height: 14px;
+.capacidad-cobertura__icon svg {
+  width: 24px;
+  height: 24px;
 }
 
-.capacidad-operativa__item-text {
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--color-navy);
-  letter-spacing: 0.01em;
+.capacidad-cobertura__title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  color: var(--color-white);
+  margin: 0 0 0.25rem;
 }
 
-/* Cobertura / Ciudades */
-.capacidad-operativa__matrix-badge {
-  background: linear-gradient(135deg, rgba(30, 77, 138, 0.08) 0%, rgba(30, 77, 138, 0.03) 100%);
-  border: 1.5px solid var(--color-seguridad);
+.capacidad-cobertura__desc {
+  font-size: var(--text-xs);
+  color: #94a3b8;
+  margin: 0;
+}
+
+/* Tarjeta Destacada Matriz */
+.capacidad-matriz-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 0.75rem 1.25rem;
   border-radius: var(--radius-md);
-  padding: 0.85rem 1.15rem;
-  color: var(--color-navy);
-  font-size: 0.95rem;
-  margin-bottom: var(--space-md);
   display: flex;
   align-items: center;
-  gap: 0.75rem;
-}
-
-.matrix-badge__dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: var(--color-seguridad);
-  display: inline-block;
-  box-shadow: 0 0 0 4px rgba(30, 77, 138, 0.2);
+  gap: 0.85rem;
   flex-shrink: 0;
 }
 
-.matrix-badge__tag {
+.capacidad-matriz-card__ping {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-red);
+  box-shadow: 0 0 0 4px rgba(229, 57, 53, 0.3);
   display: inline-block;
-  background-color: var(--color-seguridad);
-  color: var(--color-white);
-  font-size: 0.72rem;
+  flex-shrink: 0;
+}
+
+.capacidad-matriz-card__label {
+  display: block;
+  font-size: 0.68rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.2rem 0.55rem;
-  border-radius: var(--radius-full);
-  margin-left: 0.4rem;
-  vertical-align: middle;
+  letter-spacing: 0.08em;
+  color: #ef4444;
+  line-height: 1;
+  margin-bottom: 2px;
 }
 
-.capacidad-operativa__cities-grid {
+.capacidad-matriz-card__city {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--color-white);
+  letter-spacing: 0.01em;
+}
+
+/* Grid de Ciudades */
+.capacidad-ciudades__grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 0.65rem;
+  position: relative;
+  z-index: 1;
+}
+
+.ciudad-item {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.city-tag {
-  display: inline-flex;
   align-items: center;
-  background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
-  color: var(--color-navy);
-  padding: 0.5rem 0.85rem;
+  gap: 0.5rem;
+  padding: 0.6rem 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
-  font-size: 0.88rem;
-  font-weight: 600;
   transition: all var(--ease-default);
 }
 
-.city-tag:hover {
-  background-color: var(--color-navy);
-  color: var(--color-white);
-  border-color: var(--color-navy);
+.ciudad-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.35);
   transform: translateY(-2px);
-  box-shadow: 0 4px 10px rgba(22, 38, 64, 0.12);
+}
+
+.ciudad-item__dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #38bdf8;
+  flex-shrink: 0;
+}
+
+.ciudad-item__name {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 1199px) {
+  .capacidad-ciudades__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
 
 @media (max-width: 991px) {
-  .capacidad-operativa__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
+  .capacidad-operativa__pillars-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .capacidad-operativa__features,
-  .capacidad-operativa__coverage {
-    padding: var(--space-md);
+  .capacidad-cobertura__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .capacidad-ciudades__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 575px) {
+  .capacidad-operativa__pillars-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .capacidad-cobertura {
+    padding: 1.5rem;
+  }
+
+  .capacidad-ciudades__grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
