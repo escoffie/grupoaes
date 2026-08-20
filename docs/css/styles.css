@@ -2612,11 +2612,11 @@ button {
   letter-spacing: 0.01em;
 }
 
-/* Grid de Ciudades */
+/* Grid de Ciudades — Listado sobrio (sin fondo ni bordes de botón) */
 .capacidad-ciudades__grid {
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  gap: 0.65rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.85rem 1.5rem;
   position: relative;
   z-index: 1;
 }
@@ -2624,40 +2624,48 @@ button {
 .ciudad-item {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: var(--radius-sm);
-  transition: all var(--ease-default);
-}
-
-.ciudad-item:hover {
-  background: rgba(255, 255, 255, 0.14);
-  border-color: rgba(255, 255, 255, 0.35);
-  transform: translateY(-2px);
+  gap: 0.65rem;
+  padding: 0.2rem 0;
+  background: transparent;
+  border: none;
+  transition: opacity var(--ease-default);
 }
 
 .ciudad-item__dot {
-  width: 5px;
-  height: 5px;
+  width: 6px;
+  height: 6px;
   border-radius: 50%;
   background-color: #38bdf8;
+  box-shadow: 0 0 6px rgba(56, 189, 248, 0.5);
   flex-shrink: 0;
+  transition: transform var(--ease-default), background-color var(--ease-default);
 }
 
 .ciudad-item__name {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: #f1f5f9;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #e2e8f0;
+  letter-spacing: 0.01em;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  transition: color var(--ease-default), font-weight var(--ease-default);
+}
+
+.ciudad-item:hover .ciudad-item__name {
+  color: var(--color-white);
+  font-weight: 600;
+}
+
+.ciudad-item:hover .ciudad-item__dot {
+  transform: scale(1.35);
+  background-color: #7dd3fc;
 }
 
 @media (max-width: 1199px) {
   .capacidad-ciudades__grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 0.75rem 1.25rem;
   }
 }
 
@@ -2673,6 +2681,7 @@ button {
 
   .capacidad-ciudades__grid {
     grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem 1rem;
   }
 }
 
@@ -2687,6 +2696,7 @@ button {
 
   .capacidad-ciudades__grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 0.65rem 0.75rem;
   }
 }
 
