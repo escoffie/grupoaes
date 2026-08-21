@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="AES Suministros (AES Comercial) — Suministro y venta de insumos, consumibles y equipos de limpieza profesional para empresas en México. Marca propia Rumo.">
+    content="AES Comercial (Suministros) — Insumos profesionales para la limpieza y operación de empresas en México. Consumibles, químicos, equipamiento y marca propia Rumo.">
 
   <!-- SEO -->
-  <title>AES Suministros (Comercial) | Insumos de Limpieza Profesional para Empresas en México</title>
+  <title>AES Comercial | Insumos de Limpieza Profesional para Empresas en México</title>
   <link rel="canonical" href="https://grupoaes.mx/comercial">
 
   <!-- Google Fonts -->
@@ -21,7 +21,7 @@
   <!-- Styles -->
   <link rel="stylesheet" href="css/styles.css">
 
-  <!-- Custom styles for Comercial/Rumo -->
+  <!-- Reveal animation & Rumo styles -->
   <style>
     .reveal {
       opacity: 0;
@@ -53,7 +53,7 @@
       gap: 6px;
       background-color: #eaf6ec;
       border: 1px solid rgba(45, 122, 62, 0.3);
-      padding: 6px 12px;
+      padding: 6px 14px;
       border-radius: 20px;
       font-family: var(--font-heading);
       font-size: var(--text-xs);
@@ -77,12 +77,13 @@
       overflow: hidden;
       display: flex;
       flex-direction: column;
-      transition: border-color var(--ease-default), transform var(--ease-default);
+      transition: border-color var(--ease-default), transform var(--ease-default), box-shadow var(--ease-default);
     }
 
     .product-card:hover {
       border-color: var(--color-comercial);
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
     }
 
     .product-card__img-wrap {
@@ -94,30 +95,35 @@
       aspect-ratio: 1;
     }
 
-    .product-card__img-wrap img {
+    .product-card__img-wrap svg {
       max-width: 100%;
       max-height: 120px;
-      object-fit: contain;
+      transition: transform var(--ease-default);
+    }
+
+    .product-card:hover .product-card__img-wrap svg {
+      transform: scale(1.05);
     }
 
     .product-card__body {
-      padding: var(--space-sm);
+      padding: 1.25rem 1rem;
       display: flex;
       flex-direction: column;
       flex-grow: 1;
     }
 
     .product-card__category {
-      font-size: 10px;
+      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      color: var(--color-gray);
-      margin-bottom: 2px;
+      letter-spacing: 0.06em;
+      color: var(--color-comercial);
+      font-weight: 700;
+      margin-bottom: 4px;
     }
 
     .product-card__title {
       font-family: var(--font-heading);
-      font-size: var(--text-sm);
+      font-size: 1rem;
       font-weight: 700;
       color: var(--color-navy);
       text-transform: uppercase;
@@ -126,9 +132,9 @@
     }
 
     .product-card__desc {
-      font-size: 11px;
+      font-size: var(--text-xs);
       color: var(--color-gray);
-      line-height: 1.4;
+      line-height: 1.5;
     }
 
     @media (max-width: 1024px) {
@@ -179,7 +185,7 @@
           <a class="nav-link" href="seguridad.html">Seguridad</a>
           <a class="nav-link" href="limpieza.html">Limpieza</a>
           <a class="nav-link active" href="comercial.html">Comercial</a>
-          <a class="nav-link" href="#cobertura">Cobertura</a>
+          <a class="nav-link" href="#capacidad-operativa">Capacidad Operativa</a>
           <a class="nav-cta" href="#contacto-interno">Contacto</a>
         </nav>
 
@@ -198,42 +204,37 @@
   <!-- ============================================================ -->
   <!-- HERO INTERNO                                                  -->
   <!-- ============================================================ -->
-  <section id="inicio-comercial" class="hero hero--internal" style="--color-seguridad: var(--color-comercial);">
+  <section id="inicio-comercial" class="hero hero--internal">
 
     <!-- Background image -->
-    <img class="hero__bg"
-      src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80&auto=format&fit=crop" alt=""
-      role="presentation" width="1920" height="1080" fetchpriority="high" loading="eager">
+    <img class="hero__bg" src="assets/images/nuestras_empresas_aes_comercial.jpg" alt="" role="presentation" width="1920"
+      height="1080" fetchpriority="high" loading="eager">
 
-    <!-- Overlay gradient specific to Comercial green theme -->
+    <!-- Overlay gradient -->
     <div class="hero__overlay"
-      style="background: linear-gradient(105deg, rgba(14,25,41,0.94) 0%, rgba(45,122,62,0.85) 60%, rgba(22,38,64,0.40) 100%);"
+      style="background: linear-gradient(105deg, rgba(14,25,41,0.94) 0%, rgba(22,38,64,0.85) 55%, rgba(45,122,62,0.38) 100%);"
       aria-hidden="true"></div>
 
     <div class="container">
       <div class="hero__content">
 
-        <div class="hero__eyebrow">
-          <span class="hero__eyebrow-line" style="background-color: var(--color-comercial);" aria-hidden="true"></span>
-          <span class="hero__eyebrow-text">AES Comercial (Suministros)</span>
-        </div>
-
-        <!-- H1 -->
-        <h1 class="hero__title">
-          Insumos de Limpieza<br>
-          Profesional para Empresas
+        <!-- H1 SEO con Logo Central -->
+        <h1 class="hero__title hero__title--logo">
+          <img src="assets/logos/aes-comercial-oscuro.svg"
+            alt="AES Comercial — Insumos profesionales para la limpieza y operación de empresas" class="hero__brand-logo-img"
+            width="600" height="285" fetchpriority="high" loading="eager" style="max-width: 550px;">
+          <span class="sr-only">AES Comercial</span>
         </h1>
 
         <p class="hero__subtitle">
-          Todo lo que tu operación necesita para mantenerse impecable. Suministramos insumos, consumibles y productos
-          profesionales de limpieza para industrias e instituciones.
+          Insumos profesionales para la limpieza y operación de empresas.
+          Suministro de productos, consumibles y equipamiento para mantener una operación continua con entregas programadas y logística propia.
         </p>
 
         <div class="hero__actions">
           <a href="#contacto-interno" class="btn btn--primary"
-            style="background-color: var(--color-comercial); border-color: var(--color-comercial);">Solicitar
-            cotización</a>
-          <a href="#rumo" class="btn btn--outline">Conoce Marca Rumo</a>
+            style="background-color: var(--color-comercial); border-color: var(--color-comercial);">Solicitar cotización</a>
+          <a href="#servicios" class="btn btn--outline">Soluciones de suministro</a>
         </div>
 
         <!-- Stats de Confianza -->
@@ -244,7 +245,7 @@
           </div>
           <div class="hero-stat">
             <span class="hero-stat__value">Directo</span>
-            <span class="hero-stat__label">Distribución y Logística Propia</span>
+            <span class="hero-stat__label">Logística y Flota Propia</span>
           </div>
           <div class="hero-stat">
             <span class="hero-stat__value">Marca Rumo</span>
@@ -259,39 +260,37 @@
 
 
   <!-- ============================================================ -->
-  <!-- NUESTROS SERVICIOS                                            -->
+  <!-- NUESTROS SERVICIOS / SOLUCIONES DE SUMINISTRO                -->
   <!-- ============================================================ -->
-  <section id="servicios" class="section">
+  <section id="servicios" class="section section--light">
     <div class="container">
 
       <div class="empresas__header reveal">
-        <span class="section-label">Abastecimiento estratégico</span>
         <h2 class="section-title">Soluciones de suministro</h2>
         <div class="section-divider section-divider--center" style="background-color: var(--color-comercial);"></div>
       </div>
 
       <div class="services-grid">
 
-        <!-- 1. Insumos de limpieza -->
+        <!-- 1. Productos de limpieza profesional -->
         <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <path
                 d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
             </svg>
           </div>
-          <h3 class="service-card__title">Insumos de limpieza</h3>
+          <h3 class="service-card__title">Productos de limpieza profesional</h3>
           <p class="service-card__desc">
-            Líquidos limpiadores, desengrasantes, jabón, aromatizantes y desinfectantes concentrados de alto
-            rendimiento.
+            Líquidos desengrasantes, limpiadores multiusos, desinfectantes y químicos concentrados formulados para alto rendimiento industrial.
           </p>
         </div>
 
         <!-- 2. Consumibles institucionales -->
         <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
               <polyline points="14 2 14 8 20 8" />
@@ -299,69 +298,273 @@
           </div>
           <h3 class="service-card__title">Consumibles institucionales</h3>
           <p class="service-card__desc">
-            Abastecimiento de papel higiénico jumbo, toallas interdobladas, jabón de manos y dispensadores.
+            Abastecimiento integral de papel higiénico jumbo, toallas interdobladas, jabón de manos y despachadores de alta durabilidad.
           </p>
         </div>
 
-        <!-- 3. Equipos y accesorios -->
+        <!-- 3. Equipamiento y accesorios -->
         <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
             </svg>
           </div>
-          <h3 class="service-card__title">Equipos y accesorios</h3>
+          <h3 class="service-card__title">Equipamiento y accesorios</h3>
           <p class="service-card__desc">
-            Mops, escobas, microfibras, botes de basura, carros de limpieza y maquinarias especiales de tallado.
+            Mops, microfibras, escobas, botes de basura clasificados, carros de limpieza institucional y maquinaria especializada.
           </p>
         </div>
 
-        <!-- 4. Soluciones a la medida -->
+        <!-- 4. Soluciones especializadas -->
         <div class="service-card reveal reveal--delay-1" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <polygon points="12 2 2 7 12 12 22 7 12 2" />
               <polyline points="2 17 12 22 22 17" />
+              <polyline points="2 12 12 17 22 12" />
             </svg>
           </div>
-          <h3 class="service-card__title">Soluciones a la medida</h3>
+          <h3 class="service-card__title">Soluciones especializadas</h3>
           <p class="service-card__desc">
-            Evaluamos el consumo mensual de tu empresa para proponer compras consolidadas y evitar desabasto.
+            Formulaciones químicas y dosificaciones específicas para plantas manufactureras, sector salud, hotelería y corporativos.
           </p>
         </div>
 
-        <!-- 5. Abastecimiento continuo -->
+        <!-- 5. Entregas programadas -->
         <div class="service-card reveal reveal--delay-2" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <circle cx="12" cy="12" r="10" />
               <polyline points="12 6 12 12 16 14" />
             </svg>
           </div>
-          <h3 class="service-card__title">Abastecimiento continuo</h3>
+          <h3 class="service-card__title">Entregas programadas</h3>
           <p class="service-card__desc">
-            Rutas programadas de entrega puntual directamente en tus almacenes o sucursales con logística propia.
+            Rutas de distribución logística periódicas directo en tus almacenes o sucursales con unidades propias para evitar roturas de stock.
           </p>
         </div>
 
-        <!-- 6. Atención especializada -->
+        <!-- 6. Cotizaciones por volumen -->
         <div class="service-card reveal reveal--delay-3" style="--color-seguridad: var(--color-comercial);">
-          <div class="service-card__icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          <div class="service-card__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
               stroke-linejoin="round">
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
             </svg>
           </div>
-          <h3 class="service-card__title">Atención especializada</h3>
+          <h3 class="service-card__title">Cotizaciones por volumen</h3>
           <p class="service-card__desc">
-            Asignamos un ejecutivo de cuenta dedicado para procesar tus órdenes de compra de forma ágil.
+            Precios competitivos de mayoreo y consolidación de compras en un solo punto de abastecimiento para optimizar costos de operación.
           </p>
         </div>
 
       </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- CAPACIDAD OPERATIVA                                          -->
+  <!-- ============================================================ -->
+  <section id="capacidad-operativa" class="section capacidad-operativa section--light">
+    <div class="container">
+
+      <!-- Header de sección -->
+      <div class="capacidad-operativa__header reveal">
+        <h2 class="section-title">Capacidad Operativa</h2>
+        <p class="capacidad-operativa__subtitle">La infraestructura detrás de cada servicio</p>
+        <div class="section-divider section-divider--center" style="background-color: var(--color-comercial);"></div>
+      </div>
+
+      <!-- 1. Grid de Pilares Operativos (6 Tarjetas con íconos del brochure) -->
+      <div class="capacidad-operativa__pillars-grid">
+
+        <!-- 1. Atención personalizada -->
+        <div class="capacidad-pillar-card reveal">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Atención personalizada</h3>
+        </div>
+
+        <!-- 2. Logística y distribución propia -->
+        <div class="capacidad-pillar-card reveal reveal--delay-1">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13"/>
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/>
+              <circle cx="5.5" cy="18.5" r="2.5"/>
+              <circle cx="18.5" cy="18.5" r="2.5"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Logística propia</h3>
+        </div>
+
+        <!-- 3. Entregas programadas -->
+        <div class="capacidad-pillar-card reveal reveal--delay-2">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Entregas programadas</h3>
+        </div>
+
+        <!-- 4. Amplio catálogo -->
+        <div class="capacidad-pillar-card reveal reveal--delay-1">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7"/>
+              <rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/>
+              <rect x="3" y="14" width="7" height="7"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Amplio catálogo</h3>
+        </div>
+
+        <!-- 5. Un solo punto de abasto -->
+        <div class="capacidad-pillar-card reveal reveal--delay-2">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Un solo punto de abasto</h3>
+        </div>
+
+        <!-- 6. Respaldo Grupo AES -->
+        <div class="capacidad-pillar-card reveal reveal--delay-3">
+          <div class="capacidad-pillar-card__icon" aria-hidden="true" style="color: var(--color-comercial); background-color: rgba(45, 122, 62, 0.08);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <h3 class="capacidad-pillar-card__title">Respaldo Grupo AES</h3>
+        </div>
+
+      </div>
+
+      <!-- 2. Panel Ejecutivo de Presencia y Cobertura Territorial -->
+      <div class="capacidad-cobertura reveal reveal--delay-2">
+        <div class="capacidad-cobertura__header">
+          <div class="capacidad-cobertura__title-wrap">
+            <div class="capacidad-cobertura__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="10" r="3"/>
+                <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z"/>
+              </svg>
+            </div>
+            <div>
+              <h3 class="capacidad-cobertura__title">Red de Distribución y Cobertura Nacional</h3>
+              <p class="capacidad-cobertura__desc">Abastecimiento coordinado y puntual en plazas estratégicas de México</p>
+            </div>
+          </div>
+
+          <div class="capacidad-matriz-card">
+            <span class="capacidad-matriz-card__ping"></span>
+            <div>
+              <span class="capacidad-matriz-card__label">Matriz operativa</span>
+              <strong class="capacidad-matriz-card__city">Mérida, Yucatán</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="capacidad-ciudades__grid">
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Cancún</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Oaxaca</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Villahermosa</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Tuxtla Gutiérrez</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Veracruz</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">CDMX</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">León</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Tapachula</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Chetumal</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Playa del Carmen</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Campeche</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Guadalajara</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Querétaro</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Guanajuato</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">San Luis Potosí</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Aguascalientes</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Torreón</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Durango</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Saltillo</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Monterrey</span>
+          </div>
+          <div class="ciudad-item">
+            <span class="ciudad-item__dot"></span>
+            <span class="ciudad-item__name">Zacatecas</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -377,7 +580,7 @@
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
             <polyline points="20 6 9 17 4 12" />
           </svg>
-          Marca Exclusiva
+          Marca Exclusiva Grupo AES
         </div>
         <h2
           style="font-family: var(--font-heading); font-size: var(--text-3xl); font-weight: 800; color: var(--color-navy); text-transform: uppercase; line-height: 1.1; margin-bottom: var(--space-sm);">
@@ -394,7 +597,6 @@
 
         <div class="product-card reveal">
           <div class="product-card__img-wrap">
-            <!-- SVG representacional de botella de Limpiador Multiusos -->
             <svg viewBox="0 0 100 150" width="60" height="100">
               <rect x="35" y="10" width="30" height="20" rx="3" fill="#162640" />
               <path d="M25 45 C25 35, 75 35, 75 45 L80 130 C80 140, 20 140, 20 130 Z" fill="#35a8e0" />
@@ -406,7 +608,7 @@
           <div class="product-card__body">
             <span class="product-card__category">Químicos</span>
             <h4 class="product-card__title">Limpiador Multiusos</h4>
-            <p class="product-card__desc">Poder desengrasante concentrado con aromas duraderos.</p>
+            <p class="product-card__desc">Poder desengrasante concentrado con aromas duraderos para todo tipo de superficies.</p>
           </div>
         </div>
 
@@ -423,7 +625,7 @@
           <div class="product-card__body">
             <span class="product-card__category">Sanitizantes</span>
             <h4 class="product-card__title">Sanitizante de Superficies</h4>
-            <p class="product-card__desc">Elimina el 99.9% de bacterias sin dañar materiales.</p>
+            <p class="product-card__desc">Elimina el 99.9% de bacterias y patógenos sin dañar materiales ni dejar residuos.</p>
           </div>
         </div>
 
@@ -440,7 +642,7 @@
           <div class="product-card__body">
             <span class="product-card__category">Lavandería</span>
             <h4 class="product-card__title">Detergente Líquido</h4>
-            <p class="product-card__desc">Fórmula de alta concentración para uniformes y mantelería.</p>
+            <p class="product-card__desc">Fórmula de alta concentración para lavado de uniformes industriales y mantelería.</p>
           </div>
         </div>
 
@@ -457,7 +659,7 @@
           <div class="product-card__body">
             <span class="product-card__category">Cuidado Corporal</span>
             <h4 class="product-card__title">Jabón Líquido Manos</h4>
-            <p class="product-card__desc">Suave con la piel, ideal para tránsitos institucionales elevados.</p>
+            <p class="product-card__desc">Suave con la piel y antibacterial, ideal para tránsitos institucionales elevados.</p>
           </div>
         </div>
 
@@ -468,76 +670,216 @@
 
 
   <!-- ============================================================ -->
-  <!-- COBERTURA NACIONAL                                            -->
+  <!-- SECTORES QUE ATENDEMOS (IDEAL PARA)                           -->
   <!-- ============================================================ -->
-  <section id="cobertura" class="section">
+  <section id="industrias" class="section industrias">
     <div class="container">
-      <div class="institucional__grid">
 
-        <!-- Texto -->
-        <div class="reveal">
-          <span class="section-label">Red Logística</span>
-          <h2 class="section-title">Cobertura de distribución</h2>
-          <div class="section-divider"
-            style="background-color: var(--color-comercial); margin-bottom: var(--space-md);"></div>
-          <p class="institucional__body">
-            Entregamos consumibles directamente en tus naves industriales, centros de distribución y oficinas
-            corporativas en todo México.
-          </p>
-          <ul class="institucional__bullets" style="margin-top: var(--space-sm);">
-            <li class="institucional__bullet">
-              <div class="institucional__bullet-text">
-                <strong>Logística Propia</strong>
-                <span>Contamos con unidades dedicadas para garantizar que las entregas se realicen sin mermas ni
-                  retrasos.</span>
-              </div>
-            </li>
-            <li class="institucional__bullet">
-              <div class="institucional__bullet-text">
-                <strong>Productos Certificados</strong>
-                <span>Todos los productos de la marca Rumo y distribuidos cuentan con fichas técnicas y hojas de
-                  seguridad de acuerdo a normativa.</span>
-              </div>
-            </li>
-          </ul>
+      <div class="industrias__header reveal">
+        <h2 class="section-title">Sectores que atendemos</h2>
+        <div class="section-divider section-divider--center" style="background-color: var(--color-comercial);"></div>
+      </div>
+
+      <div class="industrias__grid">
+
+        <div class="industria-item reveal reveal--delay-1" data-industry="retail" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+              <polyline points="9 22 9 12 15 12 15 22" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Retail y autoservicio</span>
         </div>
 
-        <!-- SVG Map Cobertura -->
-        <div class="map-container reveal reveal--delay-2">
-          <svg class="map-svg" viewBox="0 0 600 400" width="100%" height="auto" role="img"
-            aria-label="Mapa de Cobertura Nacional de Grupo AES">
-            <rect width="100%" height="100%" fill="none" />
+        <div class="industria-item reveal reveal--delay-1" data-industry="manufactura" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Industria y manufactura</span>
+        </div>
 
-            <g fill="#e2e6eb" stroke="#ffffff" stroke-width="2">
-              <path d="M80,30 L110,60 L70,160 L50,150 Z" />
-              <path d="M120,70 L250,50 L280,150 L180,180 Z" />
-              <path d="M250,150 L380,180 L420,280 L350,300 L250,220 Z" />
-              <path d="M420,280 L520,250 L530,300 L440,320 Z" />
-            </g>
+        <div class="industria-item reveal reveal--delay-2" data-industry="corporativo" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 03 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 021 16z" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Corporativos y oficinas</span>
+        </div>
 
-            <!-- Puntos activos de Cobertura de AES Comercial (Centros principales) -->
-            <!-- CDMX (Centro) -->
-            <circle cx="320" cy="220" r="10" fill="var(--color-comercial)" />
-            <circle cx="320" cy="220" r="18" fill="none" stroke="var(--color-comercial)" stroke-width="2" opacity="0.4"
-              class="diagram-orbit-path" />
-            <text x="340" y="225" font-family="'Barlow Condensed', sans-serif" font-size="14" font-weight="700"
-              fill="var(--color-navy)">CDMX y Centro</text>
+        <div class="industria-item reveal reveal--delay-2" data-industry="logistica" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="1" y="3" width="15" height="13" />
+              <polygon points="16 8 20 8 23 11 23 16 16 16 16 8" />
+              <circle cx="5.5" cy="18.5" r="2.5" />
+              <circle cx="18.5" cy="18.5" r="2.5" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Centros logísticos</span>
+        </div>
 
-            <!-- Monterrey (Norte) -->
-            <circle cx="240" cy="110" r="8" fill="var(--color-comercial)" />
-            <text x="255" y="115" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
-              fill="var(--color-navy)">Monterrey</text>
+        <div class="industria-item reveal reveal--delay-3" data-industry="educacion" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+              <path d="M6 12v5c3 3 9 3 12 0v-5" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Educación</span>
+        </div>
 
-            <!-- Guadalajara (Occidente) -->
-            <circle cx="210" cy="200" r="8" fill="var(--color-comercial)" />
-            <text x="145" y="205" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
-              fill="var(--color-navy)">Guadalajara</text>
+        <div class="industria-item reveal reveal--delay-3" data-industry="inmobiliario" role="button" tabindex="0"
+          aria-expanded="false" aria-controls="industrias-details">
+          <div class="industria-item__icon" aria-hidden="true" style="color: var(--color-comercial);">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polygon points="3 9 12 2 21 9 21 20 3 20 3 9" />
+              <rect x="9" y="14" width="6" height="6" rx="0" />
+            </svg>
+          </div>
+          <span class="industria-item__label">Desarrollos inmobiliarios</span>
+        </div>
 
-            <!-- Bajío -->
-            <circle cx="280" cy="180" r="8" fill="var(--color-comercial)" />
-            <text x="295" y="185" font-family="'Barlow Condensed', sans-serif" font-size="12" font-weight="700"
-              fill="var(--color-navy)">Bajío</text>
-          </svg>
+      </div>
+
+      <!-- Modal de Detalles de Industrias -->
+      <div class="industrias__modal" id="industrias-modal" aria-hidden="true" role="dialog"
+        aria-labelledby="industrias-title">
+        <div class="industrias__modal-backdrop" id="industrias-backdrop"></div>
+        <div class="industrias__modal-content">
+          <button class="industrias__modal-close" id="industrias-close" aria-label="Cerrar detalles">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <line x1="18" y1="6" x2="6" y2="18" />
+              <line x1="6" y1="6" x2="18" y2="18" />
+            </svg>
+          </button>
+          <div class="industrias__modal-layout">
+            <div class="industrias__modal-image-col">
+              <img id="industrias-modal-img" class="industrias__modal-img" src="" alt="">
+            </div>
+            <div class="industrias__modal-info-col">
+              <h3 class="industrias__modal-title" id="industrias-title"></h3>
+              <div class="industrias__modal-grid industrias__modal-grid--single">
+                <div class="industrias__modal-col col-comercial">
+                  <div class="col-header">
+                    <span class="col-header__icon col-header__icon--comercial" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
+                      </svg>
+                    </span>
+                    AES Comercial
+                  </div>
+                  <p class="col-text" id="ind-desc-comercial"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================================ -->
+  <!-- ¿POR QUÉ GRUPO AES? (VENTAJAS & BENEFICIOS)                  -->
+  <!-- ============================================================ -->
+  <section class="section section--light ventajas-competitivas">
+    <div class="container">
+      <div class="ventajas__grid">
+
+        <div class="reveal">
+          <h2 class="ventajas__title">¿Por qué elegir<br>AES Comercial?</h2>
+          <p class="ventajas__subtitle">
+            Consolidamos todo el suministro de insumos, consumibles y químicos profesionales en un solo proveedor confiable con entregas garantizadas y precios altamente competitivos.
+          </p>
+
+          <ul class="ventajas__checklist" role="list">
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Atención y asesoría personalizada
+            </li>
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Cotizaciones de acuerdo con el volumen requerido
+            </li>
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Productos formulados para uso profesional
+            </li>
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Entregas programadas y logística propia
+            </li>
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Un solo punto de abastecimiento integral
+            </li>
+            <li class="ventajas__check">
+              <span class="ventajas__check-icon" style="background-color: var(--color-comercial);" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <polyline points="20 6 9 17 4 12" />
+                </svg>
+              </span>
+              Respaldo corporativo de Grupo AES
+            </li>
+          </ul>
+
+          <div style="margin-top: var(--space-md); padding: var(--space-sm) var(--space-md); background: rgba(45, 122, 62, 0.08); border-left: 3px solid var(--color-comercial); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+            <p style="font-size: var(--text-sm); font-style: italic; color: var(--color-navy); margin: 0; font-weight: 600;">
+              “Un colaborador respaldado brinda un mejor servicio.”
+            </p>
+          </div>
+        </div>
+
+        <div class="ventajas__image-wrap reveal reveal--delay-2">
+          <img src="assets/images/nuestras_empresas_aes_comercial.jpg"
+            alt="Suministro de insumos y consumibles de limpieza profesional por AES Comercial" width="600" height="750"
+            loading="lazy">
         </div>
 
       </div>
@@ -560,7 +902,7 @@
             Consolida tu abastecimiento
           </h2>
           <p class="cta-final__body" style="margin-bottom: var(--space-md); text-align: left; max-width: 100%;">
-            Solicita una cotización de mayoreo o programa de entrega recurrente para los insumos de tu organización.
+            Solicita una cotización de mayoreo o programa de entrega recurrente para los insumos de tu organización con precios preferenciales.
           </p>
           <div class="footer-contact-item" style="color: rgba(255,255,255,0.72); margin-bottom: var(--space-xs);">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -663,7 +1005,7 @@
             <li><a class="footer-col__link" href="seguridad.html">AES Seguridad</a></li>
             <li><a class="footer-col__link" href="limpieza.html">AES Limpieza</a></li>
             <li><a class="footer-col__link" href="comercial.html">AES Comercial</a></li>
-            <li><a class="footer-col__link" href="#">Rumo</a></li>
+            <li><a class="footer-col__link" href="#rumo">Rumo</a></li>
           </ul>
         </div>
 
@@ -704,7 +1046,7 @@
               <circle cx="12" cy="10" r="3" />
               <path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 14 8 14s8-8.75 8-14a8 8 0 0 0-8-8z" />
             </svg>
-            <span>Mérida, Yucatán, México</span>
+            <span>Calle 32 No. 146-B x 31 y 33, Col. México, Mérida, Yucatán</span>
           </div>
         </div>
 
