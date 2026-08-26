@@ -2265,10 +2265,9 @@ button {
 }
 
 .hero-stats {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: var(--space-md) var(--space-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--space-md);
   margin-top: var(--space-xl);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: var(--space-md);
@@ -2811,7 +2810,7 @@ button {
     grid-template-columns: 1fr;
   }
   .hero-stats {
-    flex-direction: column;
+    grid-template-columns: 1fr;
     gap: var(--space-sm);
   }
   .contact-form-card {
