@@ -2265,12 +2265,19 @@ button {
 }
 
 .hero-stats {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-md);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: var(--space-md) var(--space-xl);
   margin-top: var(--space-xl);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   padding-top: var(--space-md);
+}
+
+.hero-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .hero-stat__value {
@@ -2804,7 +2811,7 @@ button {
     grid-template-columns: 1fr;
   }
   .hero-stats {
-    grid-template-columns: 1fr;
+    flex-direction: column;
     gap: var(--space-sm);
   }
   .contact-form-card {
